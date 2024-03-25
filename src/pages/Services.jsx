@@ -11,8 +11,8 @@ export default function App() {
       description:
         'At PBS, we offer our clients a unified resource for price discovery, liquidity and execution, Leveraging on one extensive market connectivity. We are able to offer liquidity facilitate and the matching of buyers and sellers as an intermediary, which in return enable our clients greater access the global derivatives markets, price discovery and anonymity all at the same time leveraging our extensive market connectivity. We are able to offer liquidity to our clients. Acting as an intermediary, matching buyers and sellers, PBS offer our clients greater access to the global derivatives market, price discoveries & with a high level of confidentiality.',
       path: 'circle(50% at 100% 100%)',
-      x: 'bottom-20',
-      y: 'left-[60%]',
+      x: 'bottom-14',
+      y: 'left-[65%]',
       lx: 'bottom-20',
       ly: 'left-[70%]',
     },
@@ -23,8 +23,8 @@ export default function App() {
       description:
         'With knowledge and expertise in market analysis, negotiation, and risk management we are able tp identify suitable counterparties for our clients to facilate smooth and efficient transactions of the physical quantities of crude oil and refined products.',
       path: 'circle(50% at 0 100%)',
-      x: 'bottom-20',
-      y: 'right-[60%]',
+      x: 'bottom-14',
+      y: 'right-[65%]',
       lx: 'bottom-20',
       ly: 'right-[70%]',
     },
@@ -35,8 +35,8 @@ export default function App() {
       description:
         'OTC derivatives provide a wide range of risk management solutions for market participants to hedge against potential losses or mitigate exposure to market volatility. At PBS, we understand the challanges posed by market fluctuations and are dedicated to tailoring our hedging solutions strategies to our clients to help them navigate these risks effectively.',
       path: 'circle(50% at 100% 0)',
-      x: 'top-20',
-      y: 'left-[60%]',
+      x: 'top-14',
+      y: 'left-[65%]',
       lx: 'top-20',
       ly: 'left-[70%]',
     },
@@ -47,8 +47,8 @@ export default function App() {
       description:
         'Reaserching and analyzing market trends and dynamics in the commodity markets. We are able to provide our clients with the essential info, thus need to make well informed trading decisions.',
       path: 'circle(50% at 0 0)',
-      x: 'top-20',
-      y: 'right-[60%]',
+      x: 'top-14',
+      y: 'right-[65%]',
       lx: 'top-20',
       ly: 'right-[70%]',
     },
@@ -74,7 +74,7 @@ export default function App() {
                   }}
                 >
                   <p
-                    className={`font-semibold text-[18px] absolute ${quadrant.x} ${quadrant.y}  lg:${quadrant.lx} lg:${quadrant.ly} text-center`}
+                    className={`font-semibold max-w-[100px] text-[18px] absolute ${quadrant.x} ${quadrant.y}  lg:${quadrant.lx} lg:${quadrant.ly} text-center`}
                   >
                     {quadrant.title}
                   </p>
