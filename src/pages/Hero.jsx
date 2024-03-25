@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <div className="flex flex-col justify-center h-[90vh] p-6 md:px-10 lg:px-24 max-w-[1024px] mx-auto">
+    <div className="flex flex-col justify-center h-[95vh] p-6 md:px-10 lg:px-24 max-w-[1024px]  mx-auto">
       <p className="text-[40px] lg:text-[64px] font-semibold bg-gradient-to-b from-[#FFFFFF] to-gray-700 bg-clip-text text-transparent leading-tight">
         Connecting clients to <br />
         the global <br />
