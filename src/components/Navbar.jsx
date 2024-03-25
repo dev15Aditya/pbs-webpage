@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Navbar,
@@ -12,7 +12,7 @@ import {
 } from '@nextui-org/react';
 
 export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = ['About Us', 'Services', 'Products', 'Carriers', 'Sign Up'];
 
@@ -30,7 +30,7 @@ export default function App() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-7" justify="center">
         <NavbarItem>
           <Link className="text-[#A6A6A6]" to="/about-us">
             About Us
@@ -41,11 +41,6 @@ export default function App() {
             Services
           </Link>
         </NavbarItem>
-        {/* <NavbarItem isActive>
-          <Link href="/services" className="text-[#ffffff]" aria-current="page">
-            Services
-          </Link>
-        </NavbarItem> */}
         <NavbarItem>
           <Link className="text-[#A6A6A6]" to="/products">
             Products
