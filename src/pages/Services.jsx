@@ -74,7 +74,7 @@ export default function App() {
                   }}
                 >
                   <p
-                    className={`font-semibold lg:text-[18px] absolute ${quadrant.x} ${quadrant.y}  lg:${quadrant.lx} lg:${quadrant.ly} text-center`}
+                    className={`font-semibold lg:text-[18px] absolute ${quadrant.x} ${quadrant.y}  lg:${quadrant.lx} lg:${quadrant.ly} text-center lg:w-[120px]`}
                   >
                     {quadrant.title}
                   </p>
