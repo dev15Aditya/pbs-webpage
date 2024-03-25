@@ -11,8 +11,8 @@ export default function App() {
       description:
         'At PBS, we offer our clients a unified resource for price discovery, liquidity and execution, Leveraging on one extensive market connectivity. We are able to offer liquidity facilitate and the matching of buyers and sellers as an intermediary, which in return enable our clients greater access the global derivatives markets, price discovery and anonymity all at the same time leveraging our extensive market connectivity. We are able to offer liquidity to our clients. Acting as an intermediary, matching buyers and sellers, PBS offer our clients greater access to the global derivatives market, price discoveries & with a high level of confidentiality.',
       path: 'circle(50% at 100% 100%)',
-      x: 'bottom-14',
-      y: 'left-[65%]',
+      x: 'bottom-10',
+      y: 'left-[62%]',
       lx: 'bottom-20',
       ly: 'left-[70%]',
     },
@@ -23,8 +23,8 @@ export default function App() {
       description:
         'With knowledge and expertise in market analysis, negotiation, and risk management we are able tp identify suitable counterparties for our clients to facilate smooth and efficient transactions of the physical quantities of crude oil and refined products.',
       path: 'circle(50% at 0 100%)',
-      x: 'bottom-14',
-      y: 'right-[65%]',
+      x: 'bottom-10',
+      y: 'right-[62%]',
       lx: 'bottom-20',
       ly: 'right-[70%]',
     },
@@ -35,8 +35,8 @@ export default function App() {
       description:
         'OTC derivatives provide a wide range of risk management solutions for market participants to hedge against potential losses or mitigate exposure to market volatility. At PBS, we understand the challanges posed by market fluctuations and are dedicated to tailoring our hedging solutions strategies to our clients to help them navigate these risks effectively.',
       path: 'circle(50% at 100% 0)',
-      x: 'top-14',
-      y: 'left-[65%]',
+      x: 'top-10',
+      y: 'left-[62%]',
       lx: 'top-20',
       ly: 'left-[70%]',
     },
@@ -47,8 +47,8 @@ export default function App() {
       description:
         'Reaserching and analyzing market trends and dynamics in the commodity markets. We are able to provide our clients with the essential info, thus need to make well informed trading decisions.',
       path: 'circle(50% at 0 0)',
-      x: 'top-14',
-      y: 'right-[65%]',
+      x: 'top-10',
+      y: 'right-[62%]',
       lx: 'top-20',
       ly: 'right-[70%]',
     },
@@ -59,9 +59,9 @@ export default function App() {
       <div className="relative">
         <Avatar
           src="./logo192.png"
-          className="w-32 h-32 text-large border-[8px] border-solid border-[#000] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+          className="w-24 h-24 lg:w-32 lg:h-32 text-large border-[8px] border-solid border-[#000] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
         />
-        <div className="grid grid-cols-2 grid-rows-2 gap-2 min-w-[800px] min-h-[800px] absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+        <div className="grid grid-cols-2 grid-rows-2 gap-2 min-w-[600px] min-h-[600px] lg:min-w-[800px] lg:min-h-[800px] absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
           {quadrants.map((quadrant, index) => (
             <Popover key={index} showArrow placement="top">
               <PopoverTrigger>
@@ -74,7 +74,7 @@ export default function App() {
                   }}
                 >
                   <p
-                    className={`font-semibold text-[18px] absolute ${quadrant.x} ${quadrant.y}  lg:${quadrant.lx} lg:${quadrant.ly} text-center`}
+                    className={`font-semibold lg:text-[18px] absolute ${quadrant.x} ${quadrant.y}  lg:${quadrant.lx} lg:${quadrant.ly} text-center`}
                   >
                     {quadrant.title}
                   </p>
