@@ -4,7 +4,7 @@ const AboutUs = () => {
   return (
     <div className="px-6 py-6 lg:mt-0 md:px-10 lg:px-24 max-w-[1024px] mx-auto">
       <div className="h-[30vh] lg:h-[40vh] flex items-center justify-center">
-        <p className="text-[24px] lg:text-[45px] text-center font-semibold bg-gradient-to-b from-[#FFFFFF] to-gray-700 bg-clip-text text-transparent leading-tight">
+        <p className="text-[18px] lg:text-[45px] text-center font-semibold bg-gradient-to-b from-[#FFFFFF] to-gray-700 bg-clip-text text-transparent leading-tight">
           Your trusted partner in navigating <br /> the complexities of
           commodity <br />
           trading
