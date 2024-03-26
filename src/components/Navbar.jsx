@@ -57,7 +57,7 @@ export default function App() {
         <NavbarItem>
           <Button
             as={Link}
-            className="text-[#A6A6A6] font-semibold"
+            className="text-[#A6A6A6] font-semibold border-[2px] border-[#272B36] bg-[#050507]"
             color="primary"
             to="/"
             variant="flat"
