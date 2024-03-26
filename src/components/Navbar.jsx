@@ -14,7 +14,7 @@ import {
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = ['About Us', 'Services', 'Products', 'Carriers', 'Sign Up'];
+  const menuItems = ['About Us', 'Services', 'Products', 'Careers', 'Sign Up'];
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-transparent">
@@ -49,7 +49,7 @@ export default function App() {
         </NavbarItem>
         <NavbarItem>
           <Link className="text-[#A6A6A6]" to="/carriers">
-            Carriers
+            Careers
           </Link>
         </NavbarItem>
       </NavbarContent>
