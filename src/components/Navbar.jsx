@@ -25,7 +25,8 @@ export default function App() {
         />
         <NavbarBrand>
           <Link to="/">
-            <p className="font-bold text-inherit">PBS</p>
+            <img height={90} width={90} className="h" src="./Logo.png" alt="" />
+            {/* <p className="font-bold text-inherit">PBS</p> */}
           </Link>
         </NavbarBrand>
       </NavbarContent>

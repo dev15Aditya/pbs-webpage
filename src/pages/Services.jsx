@@ -58,9 +58,10 @@ export default function App() {
     <div className="min-h-screen flex justify-center items-center overflow-hidden pb-[150px]">
       <div className="relative">
         <Avatar
-          src="./logo192.png"
-          className="w-24 h-24 lg:w-32 lg:h-32 text-large border-[8px] border-solid border-[#000] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+          src="./NLogo.png"
+          className="w-24 h-24 lg:w-32 lg:h-32 text-large border-[8px] border-solid border-[#000] rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
         />
+
         <div className="grid grid-cols-2 grid-rows-2 gap-2 min-w-[600px] min-h-[600px] lg:min-w-[800px] lg:min-h-[800px] absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
           {quadrants.map((quadrant, index) => (
             <Popover key={index} showArrow placement="top">
