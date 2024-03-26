@@ -57,11 +57,11 @@ const AboutUs = () => {
         </p>
       </div>
 
-      <div className="mt-6 mb-3 lg:my-10">
+      <div className="mt-6 mb-3">
         <h1 className="text-[18px] font-semibold text-[#FFFFFF]">Values</h1>
       </div>
 
-      <div className="my-3 lg:my-10">
+      <div className="my-3 lg:my-5">
         <h1 className="text-[16px] font-[500] text-[#FFFFFF]">
           Client Centric
         </h1>
@@ -72,7 +72,7 @@ const AboutUs = () => {
         </p>
       </div>
 
-      <div className="my-3 lg:my-10">
+      <div className="my-3 lg:my-5">
         <h1 className="text-[16px] font-[500] text-[#FFFFFF]">Integrity</h1>
         <p className="text-[16px] text-[#A6A6A6]">
           Our commitment to integrity ensures that we always act in the best
@@ -80,7 +80,7 @@ const AboutUs = () => {
         </p>
       </div>
 
-      <div className="my-3 lg:my-10">
+      <div className="my-3 lg:my-5">
         <h1 className="text-[16px] font-[500] text-[#FFFFFF]">Expertise</h1>
         <p className="text-[16px] text-[#A6A6A6]">
           Expertise underpins our commitment to excellence. We pride ourselves
@@ -89,7 +89,7 @@ const AboutUs = () => {
         </p>
       </div>
 
-      <div className="my-3 lg:my-10">
+      <div className="my-3 lg:my-5">
         <h1 className="text-[16px] font-[500] text-[#FFFFFF]">Innovation</h1>
         <p className="text-[16px] text-[#A6A6A6]">
           By embracing innovation, we are committed to staying ahead of the
@@ -97,7 +97,7 @@ const AboutUs = () => {
         </p>
       </div>
 
-      <div className="my-3 lg:my-10">
+      <div className="my-3 lg:my-5">
         <h1 className="text-[16px] font-[500] text-[#FFFFFF]">
           Sustainability
         </h1>
