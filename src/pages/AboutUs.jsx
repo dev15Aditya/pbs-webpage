@@ -21,90 +21,106 @@ const ourPeople = [
 const AboutUs = () => {
   return (
     <div className="px-6 py-6 lg:mt-0 md:px-10 lg:px-24 max-w-[1024px] mx-auto">
-      <div className="h-[30vh] lg:h-[40vh] flex items-center justify-center">
-        <p className="text-[18px] lg:text-[45px] text-center font-semibold bg-gradient-to-b from-[#FFFFFF] to-gray-700 bg-clip-text text-transparent leading-tight">
-          Your trusted partner in navigating <br /> the complexities of
-          commodity <br />
-          trading
-        </p>
+      <div className="flex flex-col md:flex-row items-center justify-start w-full  mt-10 border-[2px] rounded-lg p-2">
+        <img
+          src="./purpose.png"
+          alt="purpose"
+          className="md:w-1/2 md:h-auto mb-4 md:mb-0"
+        />
+        <div className="md:ml-8 md:w-1/2">
+          <h1 className="text-[18px] font-semibold text-[#FFFFFF]">
+            Our Purpose
+          </h1>
+          <p className="text-[16px] text-[#A6A6A6]">
+            At PBS, we believe our job goes beyond acting as intermediaries. We
+            are committed to empowering our clients by providing exceptional
+            brokerage services that enable informed decision making and
+            strategic trading in the commodities market
+          </p>
+        </div>
       </div>
 
-      <div className="my-6 lg:my-10">
-        <h1 className="text-[18px] font-semibold text-[#FFFFFF]">History</h1>
-        <p className="text-[16px] text-[#A6A6A6]">
-          Established in Singapore in 2016, PBS have remained steadfast in our
-          belief that a client focused approach and fresh, innovative solutions
-          are pivotal in attaining noteworthy milestones in a mature and
-          fiercely competitive commodities broking industry.
-        </p>
+      <div className="flex flex-col md:flex-row items-center justify-start w-full mt-10 border-[2px] rounded-lg p-2">
+        <div className=" md:w-1/2">
+          <div className="mt-6 mb-3">
+            <h1 className="text-[18px] text-center font-semibold text-[#FFFFFF]">
+              Our Values
+            </h1>
+          </div>
+
+          <div className="my-3 lg:my-5">
+            <h1 className="text-[16px] font-[500] text-[#FFFFFF]">
+              Client Centric
+            </h1>
+            <p className="text-[16px] text-[#A6A6A6]">
+              We place our clients at the forefront of everything we do. We
+              believe in cultivating strong relationships, built on trust,
+              transparency and mutual respect.
+            </p>
+          </div>
+
+          <div className="my-3 lg:my-5">
+            <h1 className="text-[16px] font-[500] text-[#FFFFFF]">Integrity</h1>
+            <p className="text-[16px] text-[#A6A6A6]">
+              Our commitment to integrity ensures that we always act in the best
+              interests of our clients and for the longevity of the business.
+            </p>
+          </div>
+
+          <div className="my-3 lg:my-5">
+            <h1 className="text-[16px] font-[500] text-[#FFFFFF]">Expertise</h1>
+            <p className="text-[16px] text-[#A6A6A6]">
+              Expertise underpins our commitment to excellence. We pride
+              ourselves on the depth of knowledge and experience we bring to
+              every aspect of our work.
+            </p>
+          </div>
+
+          <div className="my-3 lg:my-5">
+            <h1 className="text-[16px] font-[500] text-[#FFFFFF]">
+              Innovation
+            </h1>
+            <p className="text-[16px] text-[#A6A6A6]">
+              By embracing innovation, we are committed to staying ahead of the
+              curve, pioneering new paths and shaping the future of our
+              industry.
+            </p>
+          </div>
+
+          <div className="my-3 lg:my-5">
+            <h1 className="text-[16px] font-[500] text-[#FFFFFF]">
+              Sustainability
+            </h1>
+            <p className="text-[16px] text-[#A6A6A6]">
+              Committing to environmentally responsible practices and
+              contributing to social and community well-being.
+            </p>
+          </div>
+        </div>
+
+        <img
+          src="./values.png"
+          alt="values"
+          className="md:ml-8 md:w-1/2 md:h-auto mb-4 md:mb-0"
+        />
       </div>
 
-      <div className="my-6 lg:my-10">
-        <h1 className="text-[18px] font-semibold text-[#FFFFFF]">Vision</h1>
-        <p className="text-[16px] text-[#A6A6A6]">
-          To be the world’s most trusted commodities brokerage firm, recognized
-          for our expertise, reliability and unwavering commitment to the
-          success of our clients.
-        </p>
-      </div>
-
-      <div className="my-6 lg:my-10">
-        <h1 className="text-[18px] font-semibold text-[#FFFFFF]">Mission</h1>
-        <p className="text-[16px] text-[#A6A6A6]">
-          To be the world’s most trusted commodities brokerage firm, recognized
-          for our expertise, reliability and unwavering commitment to the
-          success of our clients.
-        </p>
-      </div>
-
-      <div className="mt-6 mb-3">
-        <h1 className="text-[18px] font-semibold text-[#FFFFFF]">Values</h1>
-      </div>
-
-      <div className="my-3 lg:my-5">
-        <h1 className="text-[16px] font-[500] text-[#FFFFFF]">
-          Client Centric
-        </h1>
-        <p className="text-[16px] text-[#A6A6A6]">
-          We place our clients at the forefront of everything we do. We believe
-          in cultivating strong relationships, built on trust, transparency and
-          mutual respect.
-        </p>
-      </div>
-
-      <div className="my-3 lg:my-5">
-        <h1 className="text-[16px] font-[500] text-[#FFFFFF]">Integrity</h1>
-        <p className="text-[16px] text-[#A6A6A6]">
-          Our commitment to integrity ensures that we always act in the best
-          interests of our clients and for the longevity of the business.
-        </p>
-      </div>
-
-      <div className="my-3 lg:my-5">
-        <h1 className="text-[16px] font-[500] text-[#FFFFFF]">Expertise</h1>
-        <p className="text-[16px] text-[#A6A6A6]">
-          Expertise underpins our commitment to excellence. We pride ourselves
-          on the depth of knowledge and experience we bring to every aspect of
-          our work.
-        </p>
-      </div>
-
-      <div className="my-3 lg:my-5">
-        <h1 className="text-[16px] font-[500] text-[#FFFFFF]">Innovation</h1>
-        <p className="text-[16px] text-[#A6A6A6]">
-          By embracing innovation, we are committed to staying ahead of the
-          curve, pioneering new paths and shaping the future of our industry.
-        </p>
-      </div>
-
-      <div className="my-3 lg:my-5">
-        <h1 className="text-[16px] font-[500] text-[#FFFFFF]">
-          Sustainability
-        </h1>
-        <p className="text-[16px] text-[#A6A6A6]">
-          Committing to environmentally responsible practices and contributing
-          to social and community well-being.
-        </p>
+      <div className="flex flex-col md:flex-row items-center justify-start w-full mt-10 border-[2px] rounded-lg p-2">
+        <img
+          src="./vision.png"
+          alt="purpose"
+          className="md:w-1/2 md:h-auto mb-4 md:mb-0"
+        />
+        <div className="md:ml-8 md:w-1/2">
+          <h1 className="text-[18px] font-semibold text-[#FFFFFF]">
+            Our Vision
+          </h1>
+          <p className="text-[16px] text-[#A6A6A6]">
+            To be the trusted partner of choice for commodities traders
+            globally, recognised for our expertise, unparalleled support and
+            unwavering commitment to the success of our clients.
+          </p>
+        </div>
       </div>
 
       <h1 className="text-[18px] mt-6 font-semibold text-[#FFFFFF]">
