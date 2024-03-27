@@ -62,7 +62,7 @@ const Card = ({ page }) => {
                 key={index}
                 src={`./${img}`}
                 alt="people"
-                className="w-full"
+                className="w-full md:max-w-none"
               />
             ))}
           </div>
