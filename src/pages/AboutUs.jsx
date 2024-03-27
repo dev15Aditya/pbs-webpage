@@ -56,7 +56,7 @@ const Card = ({ page }) => {
           <p className="text-[16px] text-[#A6A6A6]">
             {currentPageContent.text}
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-4 mt-4 overflow-auto max-h-[400px]">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-4 mt-4 overflow-auto max-h-[300px]">
             {currentPageContent.image.map((img, index) => (
               <img
                 key={index}
