@@ -1,6 +1,44 @@
 import React from 'react';
 import ProductCard from '../components/ProductCard';
 
+const Card = ({ data }) => {
+  return (
+    <div className="text-center bg-[#A6A6A6] rounded">
+      <h1 className="text-[18px] font-semibold text-[#000] mt-5">
+        {data.title}
+      </h1>
+      <img src={`./${data.image}`} alt="crude" className="h-auto w-[300px]" />
+    </div>
+  );
+};
+
+const crudeOil = [
+  {
+    title: 'Crude Oil',
+    image: 'crude.png',
+  },
+  {
+    title: 'Naptha',
+    image: 'naptha.png',
+  },
+  {
+    title: 'Gasoline',
+    image: 'crude.png',
+  },
+  {
+    title: 'Middle Distillates',
+    image: 'naptha.png',
+  },
+  {
+    title: 'Fuel Oil',
+    image: 'crude.png',
+  },
+  {
+    title: 'Iron Ore',
+    image: 'naptha.png',
+  },
+];
+
 const Products = () => {
   const data = [
     {
@@ -31,7 +69,26 @@ const Products = () => {
   ];
   return (
     <div className="min-h-[95vh] max-w-[1024px] mx-auto flex flex-wrap justify-center lg:justify-normal items-center gap-5 p-6 md:px-10 lg:px-24">
-      <div className="my-6 lg:my-10">
+      <div className="my-6 lg:my-10 text-center">
+        <h1 className="text-[18px] font-semibold text-[#FFFFFF]">
+          See all we do
+        </h1>
+        <p className="text-[16px] text-[#A6A6A6]">
+          Our products cover a wide range of commodities with focus on energy
+          commodities, including crude oil and refined products.
+        </p>
+      </div>
+
+      <div className="grid gap-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {crudeOil.map((product, index) => (
+          <Card key={index} data={product} />
+        ))}
+      </div>
+
+      <div>
+        <img src="./service.png" alt="service" className="rounded" />
+      </div>
+      {/* <div className="my-6 lg:my-10">
         <h1 className="text-[18px] font-semibold text-[#FFFFFF]">Products</h1>
         <p className="text-[16px] text-[#A6A6A6]">
           Our products cover a wide range of commodities with a focus on energy
@@ -40,7 +97,7 @@ const Products = () => {
       </div>
       {data.map((product, index) => (
         <ProductCard key={index} data={product} />
-      ))}
+      ))} */}
     </div>
   );
 };

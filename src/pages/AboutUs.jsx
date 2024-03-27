@@ -28,7 +28,7 @@ const Card = ({ page }) => {
     },
     {
       title: 'Our People',
-      text: 'Meet the dedicated individuals who drive our company forward with passion, expertise and a commitment to excellence.',
+      text: 'Your trusted partner in navigating the complexities of commodity trading',
       image: [
         'i1.png',
         'i2.png',

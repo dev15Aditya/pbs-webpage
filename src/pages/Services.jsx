@@ -55,8 +55,11 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen flex justify-center items-center overflow-hidden pb-[150px]">
-      <div className="relative">
+    <div className="min-h-[75vh] lg:min-h-[130vh]  flex flex-col justify- items-center overflow-hidden pb-[150px] relative bg-[#000000]">
+      <h1 className="text-[24px] my-10 font-semibold text-[#A6A6A6] px-5">
+        Solutions know no boundaries, only limited by your imagination
+      </h1>
+      <div className="relative top-56">
         <Avatar
           src="./NLogo.png"
           className="bg-[#1E2021] w-24 h-24 lg:w-32 lg:h-32 text-large border-[8px] border-solid border-[#000] rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
