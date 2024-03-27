@@ -68,7 +68,14 @@ const Card = ({ page }) => {
           </div>
         </div>
       ) : page === 2 ? (
-        <div className="text-[16px] text-[#A6A6A6] overflow-auto max-h-[260px]">
+        <div
+          className="text-[16px] text-[#A6A6A6] overflow-auto max-h-[400px]"
+          style={{
+            overflowY: 'auto',
+            scrollbarWidth: 'thin',
+            scrollbarColor: '#2bb5ff #f1f1f1',
+          }}
+        >
           {Object.entries(currentPageContent.text).map(([key, value]) => (
             <div key={key}>
               <h2 className="font-semibold text-[#FFFFFF] mt-4">{key}</h2>
