@@ -56,7 +56,7 @@ const Card = ({ page }) => {
           <p className="text-[16px] text-[#A6A6A6]">
             {currentPageContent.text}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 mt-4 overflow-auto max-h-[260px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 mt-4 overflow-auto max-h-[400px]">
             {currentPageContent.image.map((img, index) => (
               <img
                 key={index}
@@ -91,10 +91,10 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="px-6 py lg:mt-0 md:px-10 max-w-[1024px] mx-auto">
-      <div className="flex flex-col md:flex-row items-center justify-start w-full h-[90vh] lg:h-[80vh] mt-10 rounded-lg p-2 border-[2px] border-[#272B36] bg-[#0B0D0F]">
+    <div className="px-6 pb-5 lg:mt-0 md:px-10 max-w-[1024px] mx-auto">
+      <div className="flex flex-col md:flex-row items-center justify-start w-full h-[88vh] lg:h-[80vh] mt-10 rounded-lg p-2 border-[2px] border-[#272B36] bg-[#0B0D0F]">
         <img src="./logo.png" alt="" className="md:w-1/2" />
-        <div className="md:w-1/2 h-full flex flex-col justify-between md:py-8">
+        <div className="md:w-1/2 h-full flex flex-col justify-between pb-5 md:py-8">
           <Card page={currPage} />
           <Pagination total={4} initialPage={1} onChange={handlePageChange} />
         </div>
