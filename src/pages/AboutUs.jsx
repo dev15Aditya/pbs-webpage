@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import People from '../components/People';
+import { Pagination } from '@nextui-org/react';
 
 const ourPeople = [
   {
@@ -18,10 +19,56 @@ const ourPeople = [
   },
 ];
 
-const AboutUs = () => {
+const Card = ({ page }) => {
+  const content = [
+    {
+      title: 'Our Purpose',
+      text: 'At PBS, we believe our job goes beyond acting as intermediaries. We are committed to empowering our clients by providing exceptional brokerage services that enable informed decision making and strategic trading in the commodities market',
+    },
+    {
+      title: 'Our Vision',
+      text: 'To be the trusted partner of choice for commodities traders globally, recognised for our expertise, unparalleled support and unwavering commitment to the success of our clients.',
+    },
+    {
+      title: 'Our Vision2',
+      text: 'To be the trusted partner of choice for commodities traders globally, recognised for our expertise, unparalleled support and unwavering commitment to the success of our clients.',
+    },
+    {
+      title: 'Our Vision3',
+      text: 'To be the trusted partner of choice for commodities traders globally, recognised for our expertise, unparalleled support and unwavering commitment to the success of our clients.',
+    },
+  ];
+
+  const currentPageContent = content[page - 1];
+
   return (
-    <div className="px-6 py-6 lg:mt-0 md:px-10 lg:px-24 max-w-[1024px] mx-auto">
-      <div className="flex flex-col md:flex-row items-center justify-start w-full  mt-10 border-[2px] rounded-lg p-2">
+    <div className="">
+      <h1 className="text-[18px] font-semibold text-[#FFFFFF]">
+        {currentPageContent.title}
+      </h1>
+      <p className="text-[16px] text-[#A6A6A6]">{currentPageContent.text}</p>
+    </div>
+  );
+};
+
+const AboutUs = () => {
+  const [currPage, setCurrPage] = useState(1);
+
+  const handlePageChange = (page) => {
+    setCurrPage(page);
+  };
+
+  return (
+    <div className="px-6 py-6 lg:mt-0 md:px-10 max-w-[1024px] mx-auto">
+      <div className="flex flex-col md:flex-row items-center justify-start w-full mt-10 rounded-lg p-2 border-[2px] border-[#272B36] bg-[#0B0D0F]">
+        <img src="./logo.png" alt="" className="md:w-1/2" />
+        <div className="md:w-1/2 h-[250px] flex flex-col justify-between md:py-8">
+          <Card page={currPage} />
+          <Pagination total={4} initialPage={1} onChange={handlePageChange} />
+        </div>
+      </div>
+
+      {/* <div className="flex flex-col md:flex-row items-center justify-start w-full mt-10 rounded-lg p-2 border-[2px] border-[#272B36] bg-[#0B0D0F]">
         <img
           src="./purpose.png"
           alt="purpose"
@@ -38,9 +85,8 @@ const AboutUs = () => {
             strategic trading in the commodities market
           </p>
         </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row items-center justify-start w-full mt-10 border-[2px] rounded-lg p-2">
+      </div> */}
+      <div className="flex flex-col md:flex-row items-center justify-start w-full mt-10 rounded-lg p-2 border-[2px] border-[#272B36] bg-[#0B0D0F]">
         <div className=" md:w-1/2">
           <div className="mt-6 mb-3">
             <h1 className="text-[18px] text-center font-semibold text-[#FFFFFF]">
@@ -104,8 +150,7 @@ const AboutUs = () => {
           className="md:ml-8 md:w-1/2 md:h-auto mb-4 md:mb-0"
         />
       </div>
-
-      <div className="flex flex-col md:flex-row items-center justify-start w-full mt-10 border-[2px] rounded-lg p-2">
+      {/* <div className="flex flex-col md:flex-row items-center justify-start w-full mt-10 rounded-lg p-2 border-[2px] border-[#272B36] bg-[#0B0D0F]">
         <img
           src="./vision.png"
           alt="purpose"
@@ -121,8 +166,7 @@ const AboutUs = () => {
             unwavering commitment to the success of our clients.
           </p>
         </div>
-      </div>
-
+      </div> */}
       <h1 className="text-[18px] mt-6 font-semibold text-[#FFFFFF]">
         Our People
       </h1>
