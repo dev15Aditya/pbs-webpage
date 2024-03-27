@@ -96,7 +96,12 @@ const AboutUs = () => {
         <img src="./logo.png" alt="" className="md:w-1/2" />
         <div className="md:w-1/2 h-full flex flex-col justify-between pb-5 md:py-8">
           <Card page={currPage} />
-          <Pagination total={4} initialPage={1} onChange={handlePageChange} />
+          <Pagination
+            className="z-10"
+            total={4}
+            initialPage={1}
+            onChange={handlePageChange}
+          />
         </div>
       </div>
     </div>
