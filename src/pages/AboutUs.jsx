@@ -92,7 +92,7 @@ const AboutUs = () => {
 
   return (
     <div className="px-6 py lg:mt-0 md:px-10 max-w-[1024px] mx-auto">
-      <div className="flex flex-col md:flex-row items-center justify-start w-full lg:h-[80vh] mt-10 rounded-lg p-2 border-[2px] border-[#272B36] bg-[#0B0D0F]">
+      <div className="flex flex-col md:flex-row items-center justify-start w-full h-[90vh] lg:h-[80vh] mt-10 rounded-lg p-2 border-[2px] border-[#272B36] bg-[#0B0D0F]">
         <img src="./logo.png" alt="" className="md:w-1/2" />
         <div className="md:w-1/2 h-full flex flex-col justify-between md:py-8">
           <Card page={currPage} />
