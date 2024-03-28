@@ -14,7 +14,14 @@ import {
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = ['About Us', 'Services', 'Products', 'Careers', 'Sign Up'];
+  const menuItems = [
+    'About Us',
+    'Services',
+    'Products',
+    'Our People',
+    'Careers',
+    'Sign Up',
+  ];
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-transparent">
@@ -25,8 +32,10 @@ export default function App() {
         />
         <NavbarBrand>
           <Link to="/">
-            <img height={90} width={90} className="h" src="./logo.png" alt="" />
-            {/* <p className="font-bold text-inherit">PBS</p> */}
+            <div className="flex items-center">
+              <img className="h-20 w-auto" src="./NLogo.png" alt="" />
+              <img className="h-8 w-auto " src="./NLogo2.png" alt="" />
+            </div>
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -37,6 +46,7 @@ export default function App() {
             About Us
           </Link>
         </NavbarItem>
+
         <NavbarItem>
           <Link to="/services" className="text-[#A6A6A6]">
             Services
@@ -45,6 +55,11 @@ export default function App() {
         <NavbarItem>
           <Link className="text-[#A6A6A6]" to="/products">
             Products
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link className="text-[#A6A6A6]" to="/our-people">
+            Our People
           </Link>
         </NavbarItem>
         <NavbarItem>

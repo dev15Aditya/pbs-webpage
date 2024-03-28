@@ -26,22 +26,6 @@ const Card = ({ page }) => {
       title: 'Our Vision',
       text: 'To be the trusted partner of choice for commodities traders globally, recognised for our expertise, unparalleled support and unwavering commitment to the success of our clients.',
     },
-    {
-      title: 'Our People',
-      text: 'Your trusted partner in navigating the complexities of commodity trading',
-      image: [
-        'i1.png',
-        'i2.png',
-        'i3.png',
-        'i4.png',
-        'i5.png',
-        'i6.png',
-        'i7.png',
-        'i8.png',
-        'i9.png',
-        'i10.png',
-      ],
-    },
   ];
 
   const currentPageContent = content[page - 1];
@@ -98,7 +82,7 @@ const AboutUs = () => {
           <Card page={currPage} />
           <Pagination
             className="z-10"
-            total={4}
+            total={3}
             initialPage={1}
             onChange={handlePageChange}
           />
