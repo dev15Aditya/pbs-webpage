@@ -1,13 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProductCard from '../components/ProductCard';
 
 const Card = ({ data }) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="text-center bg-[#A6A6A6] rounded">
-      <h1 className="text-[18px] font-semibold text-[#000] mt-5">
+    <div className="text-center rounded overflow-hidden">
+      <h1 className="text-[18px] font-semibold text-[#FFFFFF] mt-5">
         {data.title}
       </h1>
-      <img src={`./${data.image}`} alt="crude" className="h-auto w-[300px]" />
+      <div
+        className="flex h-[180px] w-[320px] mt-4 bg-[#0B0D0F] border-[2px] border-solid border-[#151718]"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="">
+          <img
+            src={`./${data.image}`}
+            alt="crude"
+            className="h-[120px] w-[160px] m-2 "
+          />
+        </div>
+        <div className="flex flex-col w-[140px]">
+          {isHovered
+            ? data.hoveredText.map((item, index) => (
+                <li
+                  key={index}
+                  className="text-[14px] text-left text-[#A6A6A6]"
+                  style={{
+                    listStyle: 'none',
+                  }}
+                >
+                  {item}
+                </li>
+              ))
+            : data.text.map((item, index) => (
+                <li
+                  key={index}
+                  className="text-[14px] text-left text-[#A6A6A6]"
+                  style={{
+                    listStyle: 'none',
+                  }}
+                >
+                  {item}
+                </li>
+              ))}
+        </div>
+      </div>
     </div>
   );
 };
@@ -15,27 +53,89 @@ const Card = ({ data }) => {
 const crudeOil = [
   {
     title: 'Crude Oil',
-    image: 'crude.png',
+    image: 'crude.jpeg',
+    hoveredText: [
+      'Outright',
+      'Inter-month Spreads',
+      'EFS',
+      'DFL',
+      'WTI/Brent',
+      'Brent/Dub ai',
+      'Murban/Dubai',
+      'Oman/Dubai',
+    ],
+    text: [
+      'Brent Swap',
+      'Dubai Swap',
+      'WTI Swap',
+      'Dated Brent Swap',
+      'Murban Swap',
+      'Oman Swap',
+    ],
   },
   {
     title: 'Naptha',
-    image: 'naptha.png',
+    image: 'fuel.jpeg',
+    hoveredText: [
+      'Outright',
+      'Inter-month Spreads',
+      'Crack Spreads',
+      'East-West Spreads',
+      'Gas/Nap',
+    ],
+    text: ['MOPJ', 'NWE Naphtha'],
   },
   {
     title: 'Gasoline',
-    image: 'crude.png',
+    image: 'crude.jpeg',
+    hoveredText: [
+      'Outright',
+      'Inter-month Spreads',
+      'Crack Spreads',
+      'Inter-Ron',
+      'East-West Spreads',
+      'Gas/Nap',
+    ],
+    text: ['Sing 92Ron', 'Sing 95Ron', 'Sing 97Ron', 'EBOB Swap', 'RBOB Swap'],
   },
   {
     title: 'Middle Distillates',
-    image: 'naptha.png',
+    image: 'fuel.jpeg',
+    hoveredText: [
+      'Outright',
+      'Inter-month Spreads',
+      'Crack Spreads',
+      'Regrade',
+      'East-West Spreads',
+      'Diff',
+      'EFS',
+    ],
+    text: ['Sing Gasoil (10ppm)', 'Sing Jet Kero', '0.5% Sulphur Gasoil'],
   },
   {
     title: 'Fuel Oil',
-    image: 'crude.png',
+    image: 'crude.jpeg',
+    hoveredText: [
+      'Outright',
+      'Inter-month Spreads',
+      'Crack Spreads',
+      'Visco',
+      'East-West Spreads',
+      'HI5',
+    ],
+    text: [
+      'Sing LSFO Marine 0.5%',
+      'Sing HSFO 380cst',
+      'Sing HSFO 180cst',
+      'Rdam LSFO Marine 0.5%',
+      'Rdam Barges',
+    ],
   },
   {
     title: 'Iron Ore',
-    image: 'naptha.png',
+    image: 'fuel.jpeg',
+    hoveredText: ['Outright', 'Inter-month Spreads'],
+    text: ['SGX TSI Iron Ore CFR China', '(62% Fe Fines)'],
   },
 ];
 
@@ -68,7 +168,7 @@ const Products = () => {
     },
   ];
   return (
-    <div className="min-h-[95vh] max-w-[1024px] mx-auto flex flex-wrap justify-center lg:justify-normal items-center gap-5 p-6 md:px-10 lg:px-24">
+    <div className="min-h-[95vh] max-w-[1024px] mx-auto flex flex-wrap justify-center lg:justify-center items-center gap-5 py-6">
       <div className="my-6 lg:my-10 text-center">
         <h1 className="text-[18px] font-semibold text-[#FFFFFF]">
           See all we do
@@ -79,15 +179,15 @@ const Products = () => {
         </p>
       </div>
 
-      <div className="grid gap-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-wrap justify-evenly">
         {crudeOil.map((product, index) => (
           <Card key={index} data={product} />
         ))}
       </div>
 
-      <div>
+      {/* <div>
         <img src="./service.png" alt="service" className="rounded" />
-      </div>
+      </div> */}
       {/* <div className="my-6 lg:my-10">
         <h1 className="text-[18px] font-semibold text-[#FFFFFF]">Products</h1>
         <p className="text-[16px] text-[#A6A6A6]">

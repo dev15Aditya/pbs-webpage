@@ -31,7 +31,7 @@ const Card = ({ page }) => {
   const currentPageContent = content[page - 1];
 
   return (
-    <div className="">
+    <div className="h-[50vh] mt-5 md:mt-0 md:h-[90%]">
       <h1 className="text-[20px] font-semibold text-[#FFFFFF]">
         {currentPageContent.title}
       </h1>
@@ -52,7 +52,7 @@ const Card = ({ page }) => {
           </div>
         </div>
       ) : page === 2 ? (
-        <div className="text-[16px] text-[#A6A6A6] overflow-auto max-h-[260px]">
+        <div className="text-[16px] text-[#A6A6A6] overflow-auto h-[80%] lg:h-[70%]">
           {Object.entries(currentPageContent.text).map(([key, value]) => (
             <div key={key}>
               <h2 className="font-semibold text-[#FFFFFF] mt-4">{key}</h2>
@@ -61,7 +61,9 @@ const Card = ({ page }) => {
           ))}
         </div>
       ) : (
-        <p className="text-[16px] text-[#A6A6A6]">{currentPageContent.text}</p>
+        <p className="text-[16px] text-[#A6A6A6] overflow-auto">
+          {currentPageContent.text}
+        </p>
       )}
     </div>
   );
@@ -76,14 +78,16 @@ const AboutUs = () => {
 
   return (
     <div className="px-6 pb-5 lg:mt-0 md:px-10 max-w-[1024px] mx-auto overflow-hidden">
-      <div className="flex flex-col md:flex-row items-center justify-start w-full h-[88vh] lg:h-[80vh] mt-10 rounded-lg p-2 border-[2px] border-[#272B36] bg-[#0B0D0F]">
-        <img src="./logo.png" alt="" className="md:w-1/2" />
-        <div className="md:w-1/2 h-full flex flex-col justify-between pb-5 md:py-8">
+      <div className="flex flex-col md:flex-row items-center justify-start w-full md:h-[88vh]">
+        <img src="./about.jpeg" alt="" className="md:w-1/2" />
+        <div className="md:w-1/2 h-full flex flex-col justify-between md:ml-5 md:py-8">
           <Card page={currPage} />
           <Pagination
             className="z-10"
             total={3}
             initialPage={1}
+            // variant="light"
+            // color="default"
             onChange={handlePageChange}
           />
         </div>
