@@ -4,7 +4,7 @@ const Card = ({ data }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div className="text-center rounded overflow-hidden">
-      <h1 className="text-[18px] font-semibold text-[#FFFFFF] mt-5 lg:mt-8">
+      <h1 className="text-[23px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8] mt-5 lg:mt-8">
         {data.title}
       </h1>
       <div
@@ -22,7 +22,7 @@ const Card = ({ data }) => {
             ? data.hoveredText.map((item, index) => (
                 <li
                   key={index}
-                  className="text-[18px] text-left text-[#A6A6A6] font-semibold"
+                  className="text-[18px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500] list-none underline"
                 >
                   {item}
                 </li>
@@ -30,7 +30,7 @@ const Card = ({ data }) => {
             : data.text.map((item, index) => (
                 <li
                   key={index}
-                  className="text-[18px] text-left text-[#A6A6A6] font-semibold"
+                  className="text-[18px] text-left text-[#808080] tracking-tighter leading-[130%] font-semibold list-none underline"
                 >
                   {item}
                 </li>
@@ -161,10 +161,10 @@ const Products = () => {
   return (
     <div className="min-h-[95vh] max-w-[1024px] mx-auto flex flex-wrap justify-center lg:justify-center items-center gap-5 py-6">
       <div className="my-6 text-center">
-        <h1 className="text-[18px] font-semibold text-[#FFFFFF]">
+        <h1 className="text-[23px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8]">
           See all we do
         </h1>
-        <p className="text-[16px] text-[#A6A6A6]">
+        <p className="text-[18px] text-center text-[#808080] tracking-tighter leading-[130%] font-[500]">
           Our products cover a wide range of commodities with focus on energy
           commodities, including crude oil and refined products.
         </p>

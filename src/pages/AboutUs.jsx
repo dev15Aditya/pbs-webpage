@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Pagination } from '@nextui-org/react';
 
 const Card = ({ page }) => {
   const content = [
@@ -32,12 +31,12 @@ const Card = ({ page }) => {
 
   return (
     <div className="h-[50vh] mt-5 md:mt-0 md:h-[90%]">
-      <h1 className="text-[20px] font-semibold text-[#FFFFFF]">
+      <h1 className="text-[23px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8]">
         {currentPageContent.title}
       </h1>
       {page === 4 ? (
         <div>
-          <p className="text-[16px] text-[#A6A6A6]">
+          <p className="text-[18px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500]">
             {currentPageContent.text}
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-4 mt-4 overflow-auto max-h-[300px]">
@@ -52,16 +51,18 @@ const Card = ({ page }) => {
           </div>
         </div>
       ) : page === 2 ? (
-        <div className="text-[16px] text-[#A6A6A6] overflow-auto h-[80%] lg:h-[70%]">
+        <div className=" overflow-auto h-[150px]">
           {Object.entries(currentPageContent.text).map(([key, value]) => (
             <div key={key}>
               <h2 className="font-semibold text-[#FFFFFF] mt-4">{key}</h2>
-              <p>{value}</p>
+              <p className="text-[18px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500]">
+                {value}
+              </p>
             </div>
           ))}
         </div>
       ) : (
-        <p className="text-[16px] text-[#A6A6A6] overflow-auto">
+        <p className="text-[18px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500] overflow-auto">
           {currentPageContent.text}
         </p>
       )}
@@ -80,16 +81,37 @@ const AboutUs = () => {
     <div className="px-6 pb-5 lg:mt-0 md:px-10 max-w-[1024px] mx-auto overflow-hidden">
       <div className="flex flex-col md:flex-row items-center justify-start w-full md:h-[88vh]">
         <img src="./about.jpeg" alt="" className="md:w-1/2" />
-        <div className="md:w-1/2 h-full flex flex-col justify-between md:ml-5 md:py-8">
+        <div className="md:w-1/2 h-[300px] flex flex-col justify-between md:ml-5 md:py-8">
           <Card page={currPage} />
-          <Pagination
-            className="z-10"
-            total={3}
-            initialPage={1}
-            // variant="light"
-            // color="default"
-            onChange={handlePageChange}
-          />
+
+          <div className="flex justify-center">
+            <button
+              onClick={() => handlePageChange(1)}
+              className={`${
+                currPage === 1 ? 'font-bold ' : 'font-normal'
+              } text-white px-4 py-2 rounded-full mr-2`}
+            >
+              1
+            </button>
+
+            <button
+              onClick={() => handlePageChange(2)}
+              className={`${
+                currPage === 2 ? 'font-bold ' : 'font-normal'
+              } text-white px-4 py-2 rounded-full mr-2`}
+            >
+              2
+            </button>
+
+            <button
+              onClick={() => handlePageChange(3)}
+              className={`${
+                currPage === 3 ? 'font-bold ' : 'font-normal'
+              } text-white px-4 py-2 rounded-full mr-2`}
+            >
+              3
+            </button>
+          </div>
         </div>
       </div>
     </div>
