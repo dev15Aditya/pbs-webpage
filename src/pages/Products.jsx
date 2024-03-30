@@ -1,34 +1,28 @@
 import React, { useState } from 'react';
-import ProductCard from '../components/ProductCard';
 
 const Card = ({ data }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div className="text-center rounded overflow-hidden">
-      <h1 className="text-[18px] font-semibold text-[#FFFFFF] mt-5">
+      <h1 className="text-[18px] font-semibold text-[#FFFFFF] mt-5 lg:mt-8">
         {data.title}
       </h1>
       <div
-        className="flex h-[180px] w-[320px] mt-4 bg-[#0B0D0F] border-[2px] border-solid border-[#151718]"
+        className="flex min-w-[320px] h-[180px] md:h-[75vh] w-[90%] mx-auto mt-4 bg-[#0B0D0F] border-[2px] border-solid border-[#151718] rounded"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="">
-          <img
-            src={`./${data.image}`}
-            alt="crude"
-            className="h-[120px] w-[160px] m-2 "
-          />
-        </div>
-        <div className="flex flex-col w-[140px]">
+        <img
+          src={`./${data.image}`}
+          alt="crude"
+          className="h-auto w-[70%] m-2"
+        />
+        <div className="flex flex-col lg:justify-center lg:gap-y-5 w-[30%] overflow-auto">
           {isHovered
             ? data.hoveredText.map((item, index) => (
                 <li
                   key={index}
-                  className="text-[14px] text-left text-[#A6A6A6]"
-                  style={{
-                    listStyle: 'none',
-                  }}
+                  className="text-[18px] text-left text-[#A6A6A6] font-semibold"
                 >
                   {item}
                 </li>
@@ -36,10 +30,7 @@ const Card = ({ data }) => {
             : data.text.map((item, index) => (
                 <li
                   key={index}
-                  className="text-[14px] text-left text-[#A6A6A6]"
-                  style={{
-                    listStyle: 'none',
-                  }}
+                  className="text-[18px] text-left text-[#A6A6A6] font-semibold"
                 >
                   {item}
                 </li>
@@ -75,7 +66,7 @@ const crudeOil = [
   },
   {
     title: 'Naptha',
-    image: 'fuel.jpeg',
+    image: 'naptha.jpeg',
     hoveredText: [
       'Outright',
       'Inter-month Spreads',
@@ -87,7 +78,7 @@ const crudeOil = [
   },
   {
     title: 'Gasoline',
-    image: 'crude.jpeg',
+    image: 'gasoline.jpeg',
     hoveredText: [
       'Outright',
       'Inter-month Spreads',
@@ -100,7 +91,7 @@ const crudeOil = [
   },
   {
     title: 'Middle Distillates',
-    image: 'fuel.jpeg',
+    image: 'mid.jpeg',
     hoveredText: [
       'Outright',
       'Inter-month Spreads',
@@ -114,7 +105,7 @@ const crudeOil = [
   },
   {
     title: 'Fuel Oil',
-    image: 'crude.jpeg',
+    image: 'fuel.jpeg',
     hoveredText: [
       'Outright',
       'Inter-month Spreads',
@@ -133,43 +124,43 @@ const crudeOil = [
   },
   {
     title: 'Iron Ore',
-    image: 'fuel.jpeg',
+    image: 'iron.jpeg',
     hoveredText: ['Outright', 'Inter-month Spreads'],
     text: ['SGX TSI Iron Ore CFR China', '(62% Fe Fines)'],
   },
 ];
 
 const Products = () => {
-  const data = [
-    {
-      title: 'Crude oil',
-      description:
-        'Crude oil, often referenced to as "black gold", is a vital commodity that provides economics worldwide. It is also the world\'s most actively traded commodity.',
-    },
-    {
-      title: 'Fuel oil',
-      description:
-        'Fuel oil is crucial component of the energy industry, is a derived from crude oil refining. It encompasses a range of heavy distillates that includes bunker fuel and industrial fuel oil.',
-    },
-    {
-      title: 'Middle distillates',
-      description:
-        'Middle distillates comprises of returned petroleum products in intermediate boiling points common middle distillates include jet fuel (kerosene) and gasoil for powering a wide range of vehicles and machinery.',
-    },
-    {
-      title: 'Gasoline, Naptha',
-      description:
-        'Gasoline and Naptha are two essential petroleum products derived from the refining of crude oil. Gasoline also known as petrol is primarily used as a fuel for Spart ignition infernal combustion engines in automobiles, motorcycles, etc. \n Naptha is a versatile feedstoke used in various industrial processes and petrochemical applications.',
-    },
-    {
-      title: 'LPG',
-      description:
-        'Liquefied petroleum gas is a versatile and efficient energy source derived from the refining of crude oil and natural gas processing. LPG is used in a wide range of appications across residential, commercial, industrial and agricultural sectors. In households, it is commonly used for cooking. In commercial settings, it is used as a fuel for restaurants and hotels',
-    },
-  ];
+  // const data = [
+  //   {
+  //     title: 'Crude oil',
+  //     description:
+  //       'Crude oil, often referenced to as "black gold", is a vital commodity that provides economics worldwide. It is also the world\'s most actively traded commodity.',
+  //   },
+  //   {
+  //     title: 'Fuel oil',
+  //     description:
+  //       'Fuel oil is crucial component of the energy industry, is a derived from crude oil refining. It encompasses a range of heavy distillates that includes bunker fuel and industrial fuel oil.',
+  //   },
+  //   {
+  //     title: 'Middle distillates',
+  //     description:
+  //       'Middle distillates comprises of returned petroleum products in intermediate boiling points common middle distillates include jet fuel (kerosene) and gasoil for powering a wide range of vehicles and machinery.',
+  //   },
+  //   {
+  //     title: 'Gasoline, Naptha',
+  //     description:
+  //       'Gasoline and Naptha are two essential petroleum products derived from the refining of crude oil. Gasoline also known as petrol is primarily used as a fuel for Spart ignition infernal combustion engines in automobiles, motorcycles, etc. \n Naptha is a versatile feedstoke used in various industrial processes and petrochemical applications.',
+  //   },
+  //   {
+  //     title: 'LPG',
+  //     description:
+  //       'Liquefied petroleum gas is a versatile and efficient energy source derived from the refining of crude oil and natural gas processing. LPG is used in a wide range of appications across residential, commercial, industrial and agricultural sectors. In households, it is commonly used for cooking. In commercial settings, it is used as a fuel for restaurants and hotels',
+  //   },
+  // ];
   return (
     <div className="min-h-[95vh] max-w-[1024px] mx-auto flex flex-wrap justify-center lg:justify-center items-center gap-5 py-6">
-      <div className="my-6 lg:my-10 text-center">
+      <div className="my-6 text-center">
         <h1 className="text-[18px] font-semibold text-[#FFFFFF]">
           See all we do
         </h1>
@@ -179,7 +170,7 @@ const Products = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-evenly">
+      <div className="w-full mx-auto">
         {crudeOil.map((product, index) => (
           <Card key={index} data={product} />
         ))}
