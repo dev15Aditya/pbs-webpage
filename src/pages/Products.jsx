@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const Card = ({ data }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="overflow-hidden  bg-[#0B0D0F] border-[2px] border-solid border-[#151718] rounded-3xl mt-8 p-5">
+    <div className="overflow-hidden  bg-[#494A59] border-[2px] border-solid border-[#151718] rounded-3xl mt-8 p-5">
       <h1 className="text-[28px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8] mb-4">
         {data.title}
       </h1>
