@@ -31,12 +31,12 @@ const Card = ({ page }) => {
 
   return (
     <div className="h-[50vh] mt-5 md:mt-0 md:h-[90%]">
-      <h1 className="text-[23px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8]">
+      <h1 className="text-[28px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8]">
         {currentPageContent.title}
       </h1>
       {page === 4 ? (
         <div>
-          <p className="text-[18px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500]">
+          <p className="text-[24px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500]">
             {currentPageContent.text}
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-4 mt-4 overflow-auto max-h-[300px]">
@@ -51,18 +51,20 @@ const Card = ({ page }) => {
           </div>
         </div>
       ) : page === 2 ? (
-        <div className=" overflow-auto h-[150px]">
+        <div className=" overflow-auto h-[230px] md:h-[150px]">
           {Object.entries(currentPageContent.text).map(([key, value]) => (
             <div key={key}>
-              <h2 className="font-semibold text-[#FFFFFF] mt-4">{key}</h2>
-              <p className="text-[18px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500]">
+              <h2 className="font-semibold text-[#FFFFFF] text-[24px] mt-4">
+                {key}
+              </h2>
+              <p className="text-[24px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500]">
                 {value}
               </p>
             </div>
           ))}
         </div>
       ) : (
-        <p className="text-[18px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500] overflow-auto">
+        <p className="text-[24px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500] overflow-auto">
           {currentPageContent.text}
         </p>
       )}
@@ -81,7 +83,7 @@ const AboutUs = () => {
     <div className="px-6 pb-5 lg:mt-0 md:px-10 max-w-[1024px] mx-auto overflow-hidden">
       <div className="flex flex-col md:flex-row items-center justify-start w-full md:h-[88vh]">
         <img src="./about.jpeg" alt="" className="md:w-1/2" />
-        <div className="md:w-1/2 h-[300px] flex flex-col justify-between md:ml-5 md:py-8">
+        <div className="md:w-1/2 h-[360px] md:h-[325px] flex flex-col justify-between md:ml-5 md:py-8">
           <Card page={currPage} />
 
           <div className="flex justify-center">

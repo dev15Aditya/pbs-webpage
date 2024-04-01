@@ -3,26 +3,26 @@ import React, { useState } from 'react';
 const Card = ({ data }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="text-center rounded overflow-hidden">
-      <h1 className="text-[23px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8] mt-5 lg:mt-8">
+    <div className="overflow-hidden  bg-[#0B0D0F] border-[2px] border-solid border-[#151718] rounded-3xl mt-8 p-5">
+      <h1 className="text-[28px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8] mb-4">
         {data.title}
       </h1>
       <div
-        className="flex min-w-[320px] h-[180px] md:h-[75vh] w-[90%] mx-auto mt-4 bg-[#0B0D0F] border-[2px] border-solid border-[#151718] rounded"
+        className="flex min-w-[320px] h-[180px] md:h-[50vh] max-h-[390px] lg:h-[70vh]"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <img
           src={`./${data.image}`}
           alt="crude"
-          className="h-auto w-[70%] m-2"
+          className="w-[70%] h- rounded-3xl mr-4"
         />
         <div className="flex flex-col lg:justify-center lg:gap-y-5 w-[30%] overflow-auto">
           {isHovered
             ? data.hoveredText.map((item, index) => (
                 <li
                   key={index}
-                  className="text-[18px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500] list-none underline"
+                  className="text-[16px] md:text-[24px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500] list-none underline"
                 >
                   {item}
                 </li>
@@ -30,7 +30,7 @@ const Card = ({ data }) => {
             : data.text.map((item, index) => (
                 <li
                   key={index}
-                  className="text-[18px] text-left text-[#808080] tracking-tighter leading-[130%] font-semibold list-none underline"
+                  className="text-[16px] md:text-[24px] text-left text-[#808080] tracking-tighter leading-[130%] font-semibold list-none underline"
                 >
                   {item}
                 </li>
@@ -161,10 +161,10 @@ const Products = () => {
   return (
     <div className="min-h-[95vh] max-w-[1024px] mx-auto flex flex-wrap justify-center lg:justify-center items-center gap-5 py-6">
       <div className="my-6 text-center">
-        <h1 className="text-[23px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8]">
+        <h1 className="text-[28px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8]">
           See all we do
         </h1>
-        <p className="text-[18px] text-center text-[#808080] tracking-tighter leading-[130%] font-[500]">
+        <p className="text-[24px] text-center text-[#808080] tracking-tighter leading-[130%] font-[500]">
           Our products cover a wide range of commodities with focus on energy
           commodities, including crude oil and refined products.
         </p>

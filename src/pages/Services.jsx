@@ -56,7 +56,7 @@ export default function App() {
 
   return (
     <div className="min-h-[75vh] lg:min-h-[130vh]  flex flex-col justify- items-center overflow-hidden pb-[150px] relative bg-[#000000]">
-      <h1 className="text-[24px] my-10 font-semibold text-[#A6A6A6] px-5">
+      <h1 className="text-[28px]  tracking-tighter leading-[130%] font-sans font-semibold my-10 text-[#FFF] px-5">
         Solutions know no boundaries, only limited by your imagination
       </h1>
       <div className="relative top-56">

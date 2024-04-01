@@ -13,10 +13,10 @@ const Hero = () => {
         Your browser does not support the video tag.
       </video>
 
-      <p className="text-[24px] md:text-[44px] font-semibold bg-gradient-to-b from-[#FFFFFF] to-gray-700 bg-clip-text text-transparent leading-tight z-10 relative">
+      <p className="text-[45px] md:text-[62px] text-center font-semibold text-[#FFF] leading-tight z-10 md:absolute top-[30%]">
         Connecting clients to the global commodities market
       </p>
-      <button className="mt-8 mb-24 text-center bg-[#0066FF] h-[40px] max-w-[110px]  py-2 px-4 rounded-[8px] text-[#FFFFFF] font-semibold text-[14px] z-10 relative">
+      <button className="mt-8 mb-24 text-center bg-[#0066FF] h-[40px] max-w-[110px]  py-2 px-4 rounded-[8px] text-[#FFFFFF] font-semibold text-[14px] z-10 md:absolute bottom-0">
         Contact Us
       </button>
     </div>

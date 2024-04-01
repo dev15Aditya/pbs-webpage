@@ -21,11 +21,11 @@ const data = {
 const OurPeople = () => {
   return (
     <div className="min-h-[75vh] lg:min-h-[130vh]  flex flex-col justify- items-center overflow-hidden pb-[150px] relative bg-[#000000]">
-      <h1 className="text-[23px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8] mt-10">
+      <h1 className="text-[28px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8] mt-10">
         {data.title}
       </h1>
       <div>
-        <p className="text-[18px] text-[#808080] tracking-tighter leading-[130%] font-[500] text-center">
+        <p className="text-[24px] text-[#808080] tracking-tighter leading-[130%] font-[500] text-center">
           {data.text}
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 m-4 mt-10">
