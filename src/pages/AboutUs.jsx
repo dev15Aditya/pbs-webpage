@@ -39,7 +39,7 @@ const Card = ({ page }) => {
           <p className="text-[24px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500]">
             {currentPageContent.text}
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-4 mt-4 overflow-auto max-h-[300px]">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-4 mt-4 overflow-auto max-h-[320px]">
             {currentPageContent.image.map((img, index) => (
               <img
                 key={index}
@@ -64,7 +64,7 @@ const Card = ({ page }) => {
           ))}
         </div>
       ) : (
-        <p className="text-[24px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500] overflow-auto">
+        <p className="text-[24px] text-left text-[#808080] tracking-tighter leading-[130%] font-[500]">
           {currentPageContent.text}
         </p>
       )}
@@ -80,10 +80,10 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="px-6 pb-5 lg:mt-0 md:px-10 max-w-[1024px] mx-auto overflow-hidden">
+    <div className="px-6 pb-5 lg:mt-0 md:px-10 max-w-full mx-auto overflow-hidden">
       <div className="flex flex-col md:flex-row items-center justify-start w-full md:h-[88vh]">
         <img src="./about.jpeg" alt="" className="md:w-1/2" />
-        <div className="md:w-1/2 h-[360px] md:h-[325px] flex flex-col justify-between md:ml-5 md:py-8">
+        <div className="md:w-1/2 h-[360px] md:h-[340px] flex flex-col justify-between md:ml-5 md:py-8">
           <Card page={currPage} />
 
           <div className="flex justify-center">

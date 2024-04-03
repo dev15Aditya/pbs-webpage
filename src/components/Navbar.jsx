@@ -24,8 +24,11 @@ export default function App() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-transparent">
-      <NavbarContent>
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      className="bg-transparent w-[100vw]"
+    >
+      <NavbarContent className="">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           className="sm:hidden"
@@ -40,30 +43,30 @@ export default function App() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-7" justify="center">
+      <NavbarContent className="hidden sm:flex gap-7 " justify="center">
         <NavbarItem>
-          <Link className="text-[#A6A6A6]" to="/about-us">
+          <Link className="text-[#A6A6A6] hover:text-white" to="/about-us">
             About Us
           </Link>
         </NavbarItem>
 
         <NavbarItem>
-          <Link to="/services" className="text-[#A6A6A6]">
+          <Link to="/services" className="text-[#A6A6A6] hover:text-white">
             Services
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-[#A6A6A6]" to="/products">
+          <Link className="text-[#A6A6A6] hover:text-white" to="/products">
             Products
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-[#A6A6A6]" to="/our-people">
+          <Link className="text-[#A6A6A6] hover:text-white" to="/our-people">
             Our People
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-[#A6A6A6]" to="/carriers">
+          <Link className="text-[#A6A6A6] hover:text-white" to="/carriers">
             Careers
           </Link>
         </NavbarItem>
@@ -72,7 +75,7 @@ export default function App() {
         <NavbarItem>
           <Button
             as={Link}
-            className="text-[#A6A6A6] font-semibold border-[2px] border-[#272B36] bg-[#050507]"
+            className="text-[#A6A6A6] border-[2px] border-[#272B36] bg-[#050507]  hover:font-semibold hover:text-white"
             color="primary"
             to="/"
             variant="flat"
@@ -95,7 +98,7 @@ export default function App() {
                     ? 'danger'
                     : '#A6A6A6'
                 }
-                className="w-full text-[#ffffff]"
+                className="w-full text-[#ffffff]  hover:font-semibold hover:text-white"
                 to={`/${item.toLowerCase().replace(' ', '-')}`}
                 size="lg"
               >
