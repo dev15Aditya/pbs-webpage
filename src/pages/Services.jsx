@@ -86,7 +86,7 @@ export default function App() {
           {quadrants.map((quadrant, index) => (
             <div
               key={index}
-              className={`${quadrant.bg} rounded-2xl p-5 lg:px-20 h-full`}
+              className={`bg-[rgba(255, 255, 255, 0.2)] rounded-2xl p-5 lg:px-20 h-full`}
               style={{
                 boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
                 backdropFilter: 'blur(5px)',
@@ -100,35 +100,12 @@ export default function App() {
               <p className="text-[14px] lg:text-[16px] font-semibold">
                 {quadrant.displayTitle}
               </p>
-              <p className="text-[12px] h-[180px] overflow-auto">
+              <p className="text-[12px] h-[180px] w-[full] text-ellipsis">
                 {quadrant.description}
               </p>
             </div>
           ))}
         </div>
-
-        {/* <div className="grid grid-cols-2 grid-rows-2 w-[95vw] max-w-[1200px] h-[600px] lg:h-[450px] gap-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
-          {quadrants.map((quadrant, index) => (
-            <div
-              key={index}
-              className={`${quadrant.bg} rounded-2xl p-5 h-full`}
-              style={{
-                boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-                backdropFilter: 'blur(5px)',
-                WebkitBackdropFilter: 'blur(5px)',
-                border: '1px solid rgba(255, 255, 255, 0.3)',
-              }}
-            >
-              <h1 className="text-[20px] text-center font-bold">
-                {quadrant.title}
-              </h1>
-              <p className="text-[14px] font-semibold">
-                {quadrant.displayTitle}
-              </p>
-              <p className="text-[12px]">{quadrant.description}</p>
-            </div>
-          ))}
-        </div> */}
       </div>
     </div>
   );
