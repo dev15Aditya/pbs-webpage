@@ -24,7 +24,7 @@ const Hero = () => {
         Your browser does not support the video tag.
       </video>
 
-      <div className="z-40 max-w-[1024px] mx-auto flex flex-col gap-5">
+      <div className="z-10 max-w-[1024px] mx-auto flex flex-col gap-5">
         <p className="text-[24px] md:text-[70px] text-left font-semibold text-[#FFF] leading-[103%] z-10">
           Connecting clients to the global commodities market
         </p>
