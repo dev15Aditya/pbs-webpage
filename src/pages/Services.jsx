@@ -1,6 +1,5 @@
 import React from 'react';
-import { Popover, PopoverTrigger, PopoverContent } from '@nextui-org/react';
-import { Card, Avatar, CardHeader, CardBody, Divider } from '@nextui-org/react';
+import { Avatar } from '@nextui-org/react';
 
 export default function App() {
   const quadrants = [
@@ -15,6 +14,7 @@ export default function App() {
       y: 'left-[62%]',
       lx: 'bottom-20',
       ly: 'left-[70%]',
+      bg: 'bg-[#81ef6b]',
     },
     {
       title: 'Physical Brokering',
@@ -27,6 +27,7 @@ export default function App() {
       y: 'right-[62%]',
       lx: 'bottom-20',
       ly: 'right-[70%]',
+      bg: 'bg-[#2da9e7]',
     },
     {
       title: 'Hedging Solutions',
@@ -39,6 +40,7 @@ export default function App() {
       y: 'left-[62%]',
       lx: 'top-20',
       ly: 'left-[70%]',
+      bg: 'bg-[#047093]',
     },
     {
       title: 'Research & Analysis',
@@ -51,58 +53,82 @@ export default function App() {
       y: 'right-[62%]',
       lx: 'top-20',
       ly: 'right-[70%]',
+      bg: 'bg-[#437000]',
     },
   ];
 
   return (
-    <div className="min-h-[75vh] lg:min-h-[130vh]  flex flex-col justify- items-center overflow-hidden pb-[150px] relative bg-[#000000]">
-      <h1 className="text-[28px]  tracking-tighter leading-[130%] font-sans font-semibold my-10 text-[#FFF] px-5">
+    <div className="min-h-[80vh] lg:min-h-[130vh]  flex flex-col justify- items-center overflow-hidden pb-[150px] relative bg-[#000000]">
+      <h1 className="text-[28px]  tracking-tighter leading-[130%] font-sans font-semibold m-5 text-[#FFF] px-5">
         Solutions know no boundaries, only limited by your imagination
       </h1>
-      <div className="relative top-56">
+      <div className="relative top-72">
         <Avatar
           src="./NLogo.png"
-          className="bg-[#1E2021] w-24 h-24 lg:w-32 lg:h-32 text-large border-[8px] border-solid border-[#000] rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+          className="bg-[#1E2021] w-24 h-24 text-large rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
         />
 
-        <div className="grid grid-cols-2 grid-rows-2 gap-2 min-w-[600px] min-h-[600px] lg:min-w-[800px] lg:min-h-[800px] absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+        <div className="bg-[#000000] w-44 h-44 text-large rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
+        <div className="grid grid-cols-2 grid-rows-2 min-w-[280px] min-h-[280px] absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
           {quadrants.map((quadrant, index) => (
-            <Popover key={index} showArrow placement="top">
-              <PopoverTrigger>
-                <div
-                  className="bg-[#1E2021] text-[#FFFFFF] relative flex justify-center items-center"
-                  style={{
-                    clipPath: `${quadrant.path}`,
-                    height: '100%',
-                    width: '100%',
-                  }}
-                >
-                  <p
-                    className={`font-semibold lg:text-[18px] absolute ${quadrant.x} ${quadrant.y}  lg:${quadrant.lx} lg:${quadrant.ly} text-center lg:w-[120px]`}
-                  >
-                    {quadrant.title}
-                  </p>
-                </div>
-              </PopoverTrigger>
-
-              <PopoverContent className="bg-[#1E2021]">
-                <Card className="max-w-[400px] bg-[#1E2021]">
-                  <CardHeader className="flex gap-3">
-                    <div className="flex flex-col">
-                      <p className="text-md text-[#FFFFFF]">
-                        {quadrant.displayTitle}
-                      </p>
-                    </div>
-                  </CardHeader>
-                  <Divider className="bg-gray-200" />
-                  <CardBody>
-                    <p className="text-[#A6A6A6]">{quadrant.description}</p>
-                  </CardBody>
-                </Card>
-              </PopoverContent>
-            </Popover>
+            <div
+              className={`${quadrant.bg} text-[#FFFFFF] relative flex justify-center items-center`}
+              style={{
+                clipPath: `${quadrant.path}`,
+                height: '100%',
+                width: '100%',
+              }}
+            ></div>
           ))}
         </div>
+
+        <div className="grid grid-cols-2 grid-rows-2 w-[95vw] max-w-[1200px] h-[500px] lg:h-[600px] gap-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
+          {quadrants.map((quadrant, index) => (
+            <div
+              key={index}
+              className={`${quadrant.bg} rounded-2xl p-5 lg:px-20 h-full`}
+              style={{
+                boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                backdropFilter: 'blur(5px)',
+                WebkitBackdropFilter: 'blur(5px)',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
+              }}
+            >
+              <h1 className="text-[20px] lg:text-[22px] text-center font-bold">
+                {quadrant.title}
+              </h1>
+              <p className="text-[14px] lg:text-[16px] font-semibold">
+                {quadrant.displayTitle}
+              </p>
+              <p className="text-[12px] h-[180px] overflow-auto">
+                {quadrant.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* <div className="grid grid-cols-2 grid-rows-2 w-[95vw] max-w-[1200px] h-[600px] lg:h-[450px] gap-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
+          {quadrants.map((quadrant, index) => (
+            <div
+              key={index}
+              className={`${quadrant.bg} rounded-2xl p-5 h-full`}
+              style={{
+                boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                backdropFilter: 'blur(5px)',
+                WebkitBackdropFilter: 'blur(5px)',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
+              }}
+            >
+              <h1 className="text-[20px] text-center font-bold">
+                {quadrant.title}
+              </h1>
+              <p className="text-[14px] font-semibold">
+                {quadrant.displayTitle}
+              </p>
+              <p className="text-[12px]">{quadrant.description}</p>
+            </div>
+          ))}
+        </div> */}
       </div>
     </div>
   );
