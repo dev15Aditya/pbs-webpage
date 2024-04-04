@@ -13,7 +13,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative p-6 md:px-10 lg:px-5 max-w-full mx-auto h-[90vh] overflow-hidden flex flex-col gap-10 justify-center md:justify-evenly">
+    <div className="relative px-6 md:px-10 lg:px-5 max-w-full mx-auto h-[90vh] overflow-hidden flex flex-col gap-10 justify-center md:justify-evenly">
       <video
         autoPlay
         loop

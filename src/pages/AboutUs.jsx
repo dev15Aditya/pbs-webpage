@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Card = ({ page }) => {
   const content = [
@@ -79,10 +79,20 @@ const AboutUs = () => {
     setCurrPage(page);
   };
 
+  useEffect(() => {
+    // Disable vertical scrolling on the entire page
+    document.body.style.overflowY = 'hidden';
+
+    // Re-enable scrolling when the component unmounts
+    return () => {
+      document.body.style.overflowY = 'auto';
+    };
+  }, []);
+
   return (
     <div className="px-6 pb-5 lg:mt-0 md:px-10 max-w-full mx-auto overflow-hidden">
       <div className="flex flex-col md:flex-row items-center justify-start w-full md:h-[88vh]">
-        <img src="./about.jpeg" alt="" className="md:w-1/2" />
+        <img src="./about.jpg" alt="" className="md:w-1/2" />
         <div className="md:w-1/2 h-[360px] md:h-[340px] flex flex-col justify-between md:ml-5 md:py-8">
           <Card page={currPage} />
 
