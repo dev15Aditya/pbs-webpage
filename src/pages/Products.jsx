@@ -3,12 +3,21 @@ import React, { useState } from 'react';
 const Card = ({ data }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="overflow-hidden  bg-[#494A59] border-[2px] border-solid border-[#151718] rounded-3xl mt-8 p-5">
+    <div
+      className="overflow-hidden mt-8 p-5 rounded-3xl"
+      style={{
+        background: 'rgba(255, 255, 255, 0.1)',
+        boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+        backdropFilter: 'blur(5px)',
+        WebkitBackdropFilter: 'blur(5px)',
+        border: '1px solid rgba(255, 255, 255, 0.3)',
+      }}
+    >
       <h1 className="text-[28px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8] mb-4">
         {data.title}
       </h1>
       <div
-        className="flex min-w-[320px] h-[180px] md:h-[50vh] max-h-[390px] lg:h-[70vh]"
+        className="flex min-w-[320px] h-[180px] md:h-[50vh] lg:gap-8 max-h-[390px] lg:h-[70vh]"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -44,7 +53,7 @@ const Card = ({ data }) => {
 const crudeOil = [
   {
     title: 'Crude Oil',
-    image: 'crude.jpeg',
+    image: 'Crude Oil.jpg',
     hoveredText: [
       'Outright',
       'Inter-month Spreads',
@@ -65,8 +74,8 @@ const crudeOil = [
     ],
   },
   {
-    title: 'Naptha',
-    image: 'naptha.jpeg',
+    title: 'Naphtha',
+    image: 'Naphtha.jpg',
     hoveredText: [
       'Outright',
       'Inter-month Spreads',
@@ -78,7 +87,7 @@ const crudeOil = [
   },
   {
     title: 'Gasoline',
-    image: 'gasoline.jpeg',
+    image: 'Gasoline.jpg',
     hoveredText: [
       'Outright',
       'Inter-month Spreads',
@@ -91,7 +100,7 @@ const crudeOil = [
   },
   {
     title: 'Middle Distillates',
-    image: 'mid.jpeg',
+    image: 'Middle Distillates.jpg',
     hoveredText: [
       'Outright',
       'Inter-month Spreads',
@@ -105,7 +114,7 @@ const crudeOil = [
   },
   {
     title: 'Fuel Oil',
-    image: 'fuel.jpeg',
+    image: 'Fuel Oil.jpg',
     hoveredText: [
       'Outright',
       'Inter-month Spreads',
@@ -124,7 +133,7 @@ const crudeOil = [
   },
   {
     title: 'Iron Ore',
-    image: 'iron.jpeg',
+    image: 'Iron Ore.jpg',
     hoveredText: ['Outright', 'Inter-month Spreads'],
     text: ['SGX TSI Iron Ore CFR China', '(62% Fe Fines)'],
   },

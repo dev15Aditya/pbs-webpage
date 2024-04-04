@@ -19,7 +19,7 @@ export default function App() {
     'Services',
     'Products',
     'Our People',
-    'Careers',
+    // 'Careers',
     'Sign Up',
   ];
 
@@ -65,11 +65,11 @@ export default function App() {
             Our People
           </Link>
         </NavbarItem>
-        <NavbarItem>
+        {/* <NavbarItem>
           <Link className="text-[#A6A6A6] hover:text-white" to="/carriers">
             Careers
           </Link>
-        </NavbarItem>
+        </NavbarItem> */}
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
