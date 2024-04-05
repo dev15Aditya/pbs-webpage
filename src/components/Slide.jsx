@@ -11,6 +11,7 @@ const SlideContainer = styled.div`
   justify-content: center;
   transform-origin: 50% 50%;
   border-radius: 16px;
+  transition: top 0.5s ease;
 `;
 
 const SlideCard = styled.div`
@@ -40,8 +41,6 @@ function Slide({
   const totalPresentables = 2 * offsetRadius + 1;
   const distanceFactor = 1 - Math.abs(offsetFromMiddle / (offsetRadius + 1));
 
-  const translateYoffset =
-    50 * (Math.abs(offsetFromMiddle) / (offsetRadius + 1));
   let translateY = -50;
 
   if (offsetRadius !== 0) {
@@ -60,11 +59,6 @@ function Slide({
     if (translateY < -100) {
       moveSlide(1);
     }
-  }
-  if (offsetFromMiddle > 0) {
-    translateY += translateYoffset;
-  } else if (offsetFromMiddle < 0) {
-    translateY -= translateYoffset;
   }
 
   return (
@@ -86,7 +80,7 @@ function Slide({
           }}
         >
           <SlideCard
-            style={{ background: 'tansparent' }}
+            style={{ background: 'transparent' }}
             onClick={() => moveSlide(offsetFromMiddle)}
           >
             <div
@@ -99,7 +93,7 @@ function Slide({
                 border: '1px solid rgba(255, 255, 255, 0.3)',
               }}
             >
-              <h1 className="text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-tighter leading-[130%] font-semibold text-[#000] mb-4">
+              <h1 className="text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-tighter leading-[130%] font-semibold text-[#fff] mb-4">
                 {content.title}
               </h1>
               <div

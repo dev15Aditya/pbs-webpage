@@ -14,10 +14,10 @@ const Wrapper = styled.div`
 const NavigationButtons = styled.div`
   position: absolute;
   display: flex;
-  height: 60px;
+  height: 70px;
   margin: 0 auto;
   width: 20%;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   justify-content: space-between;
   z-index: 1000;
   bottom: 10%;
@@ -25,7 +25,7 @@ const NavigationButtons = styled.div`
 `;
 
 const NavBtn = styled.div`
-  background: #000000;
+  /* background: #000000; */
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 3px;
@@ -72,7 +72,11 @@ class VerticalCarousel extends React.Component {
 
   static defaultProps = {
     offsetRadius: 2,
-    animationConfig: { tension: 120, friction: 14 },
+    animationConfig: {
+      mass: 1,
+      tension: 170,
+      friction: 40,
+    },
   };
 
   modBySlidesLength = (index) => {
@@ -121,8 +125,8 @@ class VerticalCarousel extends React.Component {
     if (showNavigation) {
       navigationButtons = (
         <NavigationButtons>
-          <NavBtn onClick={() => this.moveSlide(1)}>a</NavBtn>
-          <NavBtn onClick={() => this.moveSlide(-1)}>b</NavBtn>
+          <NavBtn onClick={() => this.moveSlide(1)}>⬆️</NavBtn>
+          <NavBtn onClick={() => this.moveSlide(-1)}>⬇️</NavBtn>
         </NavigationButtons>
       );
     }

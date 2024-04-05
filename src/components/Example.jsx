@@ -110,7 +110,7 @@ export default class Example extends Component {
           width: '100vw',
           height: '100vh',
           margin: '0 auto',
-          background: '#7FfFbF',
+          background: '#000000',
         }}
       >
         <VerticalCarousel
