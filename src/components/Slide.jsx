@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { Spring } from 'react-spring/renderprops';
+import { withGesture } from 'react-with-gesture';
 
 const SlideContainer = styled.div`
   position: absolute;
@@ -11,7 +12,6 @@ const SlideContainer = styled.div`
   justify-content: center;
   transform-origin: 50% 50%;
   border-radius: 16px;
-  transition: top 0.5s ease;
 `;
 
 const SlideCard = styled.div`
@@ -41,6 +41,8 @@ function Slide({
   const totalPresentables = 2 * offsetRadius + 1;
   const distanceFactor = 1 - Math.abs(offsetFromMiddle / (offsetRadius + 1));
 
+  const translateYoffset =
+    50 * (Math.abs(offsetFromMiddle) / (offsetRadius + 1));
   let translateY = -50;
 
   if (offsetRadius !== 0) {
@@ -59,6 +61,11 @@ function Slide({
     if (translateY < -100) {
       moveSlide(1);
     }
+  }
+  if (offsetFromMiddle > 0) {
+    translateY += translateYoffset;
+  } else if (offsetFromMiddle < 0) {
+    translateY -= translateYoffset;
   }
 
   return (
@@ -106,7 +113,7 @@ function Slide({
                   alt="crude"
                   className="md:w-[200px] lg:w-[520px] md:h-[150px] lg:h-[300px] rounded-lg mb-4 sm:mb-0"
                 />
-                <div className="flex flex-col lg:justify-center lg:gap-y-5 lg:w-[200px] lg:h-[300px] overflow-auto">
+                <div className="flex flex-col lg:justify-center lg:gap-2 lg:w-[200px] lg:h-[300px] overflow-auto">
                   {isHovered
                     ? content.hoveredText.map((item, index) => (
                         <li
@@ -134,4 +141,4 @@ function Slide({
   );
 }
 
-export default Slide;
+export default withGesture()(Slide);
