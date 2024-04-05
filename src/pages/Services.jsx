@@ -68,7 +68,7 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-[80vh] lg:min-h-[130vh]  flex flex-col justify- items-center overflow-hidden pb-[150px] relative bg-[#000000]">
+    <div className="min-h-[100vh] lg:min-h-[130vh]  flex flex-col justify- items-center overflow-x-hidden pb-[150px] relative bg-[#000000]">
       <h1 className="text-[28px]  tracking-tighter leading-[130%] font-sans font-semibold m-5 text-[#FFF] px-5">
         Solutions know no boundaries, only limited by your imagination
       </h1>
@@ -110,7 +110,7 @@ export default function App() {
               <h1 className="text-[14px] mb-4 md:text-[20px] lg:text-[22px] text-center font-bold mt-10 md:mt-0">
                 {quadrant.title}
               </h1>
-              <p className="text-[14px] mb-3 lg:text-[16px] font-semibold text-center md:text-left">
+              <p className="text-[12px] mb-3 lg:text-[16px] font-semibold text-center md:text-left">
                 {quadrant.displayTitle}
               </p>
               <p className="text-[12px] hidden md:block h-[180px] w-[full] text-ellipsis">
