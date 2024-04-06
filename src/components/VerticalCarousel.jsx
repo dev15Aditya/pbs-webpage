@@ -145,7 +145,7 @@ class VerticalCarousel extends React.Component {
             />
           ))}
         </Wrapper>
-        {navigationButtons}
+        {/* {navigationButtons} */}
       </React.Fragment>
     );
   }

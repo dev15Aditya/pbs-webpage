@@ -4,6 +4,7 @@ import { config } from 'react-spring';
 
 const crudeOil = [
   {
+    key: 1,
     title: 'Crude Oil',
     image: 'Crude Oil.jpg',
     hoveredText: [
@@ -26,6 +27,7 @@ const crudeOil = [
     ],
   },
   {
+    key: 2,
     title: 'Naphtha',
     image: 'Naphtha.jpg',
     hoveredText: [
@@ -38,6 +40,7 @@ const crudeOil = [
     text: ['MOPJ', 'NWE Naphtha'],
   },
   {
+    key: 3,
     title: 'Gasoline',
     image: 'Gasoline.jpg',
     hoveredText: [
@@ -51,6 +54,7 @@ const crudeOil = [
     text: ['Sing 92Ron', 'Sing 95Ron', 'Sing 97Ron', 'EBOB Swap', 'RBOB Swap'],
   },
   {
+    key: 4,
     title: 'Middle Distillates',
     image: 'Middle Distillates.jpg',
     hoveredText: [
@@ -65,6 +69,7 @@ const crudeOil = [
     text: ['Sing Gasoil (10ppm)', 'Sing Jet Kero', '0.5% Sulphur Gasoil'],
   },
   {
+    key: 5,
     title: 'Fuel Oil',
     image: 'Fuel Oil.jpg',
     hoveredText: [
@@ -84,6 +89,7 @@ const crudeOil = [
     ],
   },
   {
+    key: 6,
     title: 'Iron Ore',
     image: 'Iron Ore.jpg',
     hoveredText: ['Outright', 'Inter-month Spreads'],
@@ -109,7 +115,7 @@ export default class Example extends Component {
           justifyContent: 'center',
           width: '100vw',
           height: '100vh',
-          margin: 'auto',
+          margin: '0 auto',
           background: '#000000',
         }}
       >

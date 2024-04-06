@@ -4,17 +4,16 @@ const Card = ({ page }) => {
   const content = [
     {
       title: 'Our Purpose',
-      text: 'At PBS, we believe our job goes beyond acting as intermediaries. We are committed to empowering our clients by providing exceptional brokerage services that enable informed decision making and strategic trading in the commodities market',
+      text: 'We are committed to empowering our clients by providing exceptional brokerage services that enable informed decision making and strategic trading in the commodities market.',
     },
     {
       title: 'Our Values',
       text: {
-        'Client Centric':
-          'We place our clients at the forefront of everything we do. We believe in cultivating strong relationships, built on trust, transparency and mutual respect.',
+        'Client Centric': '',
         Integrity:
           'Our commitment to integrity ensures that we always act in the best interests of our clients and for the longevity of the business.',
         Expertise:
-          'Expertise underpins our commitment to excellence. We pride ourselves on the depth of knowledge and experience we bring to every aspect of our work.',
+          'We pride ourselves on the depth of knowledge and experience we bring to every aspect of our work.',
         Innovation:
           'By embracing innovation, we are committed to staying ahead of the curve, pioneering new paths and shaping the future of our industry.',
         Sustainability:
@@ -23,7 +22,7 @@ const Card = ({ page }) => {
     },
     {
       title: 'Our Vision',
-      text: 'To be the trusted partner of choice for commodities traders globally, recognised for our expertise, unparalleled support and unwavering commitment to the success of our clients.',
+      text: 'To be the trusted partner of choice for our clients globally, recognised for our expertise, unparalleled support and unwavering commitment to their success.',
     },
   ];
 

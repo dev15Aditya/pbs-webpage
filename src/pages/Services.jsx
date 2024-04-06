@@ -16,7 +16,7 @@ export default function App() {
     {
       title: 'Inter-dealer Broker',
       displayTitle:
-        'Our core expertise lies in the broking of over-the-counter OTC products.',
+        'Our core expertise lies in the broking of over-the-counter products.',
       description:
         'Leveraging on our extensive market connectivity, we are able to offer liquidity and facilitate the matching of buyers and sellers as an intermediary, thus enabling our clients’ greater access to the global derivatives market, price discovery and anonymity all at the same time.',
       path: 'circle(50% at 100% 100%)',
@@ -29,9 +29,9 @@ export default function App() {
     {
       title: 'Physical Brokering',
       displayTitle:
-        'Our team is adept at physical brokering for crude oil and refined oil products',
+        'Our team is adept at physical brokering for crude oil and refined oil products.',
       description:
-        'With knowledge and expertise in market analysis, negotiation, and risk management we are able tp identify suitable counterparties for our clients to facilate smooth and efficient transactions of the physical quantities of crude oil and refined products.',
+        'With knowledge and expertise in market analysis, negotiation, and risk management we are able to identify suitable counterparties for our clients to facilate smooth and efficient transactions of the physical quantities of crude oil and refined products.',
       path: 'circle(50% at 0 100%)',
       x: 'bottom-10',
       y: 'right-[62%]',
@@ -75,12 +75,12 @@ export default function App() {
       <div className="relative top-72">
         <Avatar
           src="./NLogo.png"
-          className="bg-[#1E2021] w-24 h-24 text-large rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+          className="w-44 h-44 bg-black text-large rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
         />
 
-        <div className="bg-[#000000] w-44 h-44 text-large rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
+        {/* <div className="bg-[#000000] w-44 h-44 text-large rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div> */}
 
-        <div className="grid grid-cols-2 grid-rows-2 min-w-[280px] min-h-[280px] absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+        {/* <div className="grid grid-cols-2 grid-rows-2 min-w-[280px] min-h-[280px] absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
           {quadrants.map((quadrant, index) => (
             <div
               key={index}
@@ -92,7 +92,7 @@ export default function App() {
               }}
             ></div>
           ))}
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-2 grid-rows-2 w-[95vw] max-w-[1200px] h-[500px] lg:h-[450px] gap-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
           {quadrants.map((quadrant, index) => (

@@ -118,7 +118,7 @@ function Slide({
                     ? content.hoveredText.map((item, index) => (
                         <li
                           key={index}
-                          className="text-xs sm:text-sm md:text-base lg:text-base text-[#808080] tracking-tighter leading-[130%] font-[500] list-none underline"
+                          className="text-xs sm:text-sm md:text-base lg:text-base text-[#808080] tracking-tighter leading-[130%] font-[500] list-none"
                         >
                           {item}
                         </li>
@@ -126,7 +126,7 @@ function Slide({
                     : content.text.map((item, index) => (
                         <li
                           key={index}
-                          className="text-xs sm:text-sm md:text-base lg:text-base text-[#808080] tracking-tighter leading-[130%] font-semibold list-none underline"
+                          className="text-xs sm:text-sm md:text-base lg:text-base text-[#808080] tracking-tighter leading-[130%] font-semibold list-none"
                         >
                           {item}
                         </li>
