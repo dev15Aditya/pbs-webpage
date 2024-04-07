@@ -53,18 +53,48 @@ class VerticalCarousel extends React.Component {
   };
 
   componentDidMount = () => {
-    document.addEventListener('keydown', (event) => {
-      if (event.isComposing || event.key === 'Unidentified') {
-        return;
-      }
-      if (event.key === 'ArrowUp') {
-        this.moveSlide(-1);
-      }
-      if (event.key === 'ArrowDown') {
-        this.moveSlide(1);
-      }
-    });
+    document.addEventListener('keydown', this.handleKeyDown);
+    document.addEventListener('wheel', this.handleWheel);
   };
+
+  componentWillUnmount = () => {
+    document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener('wheel', this.handleWheel);
+  };
+
+  handleKeyDown = (event) => {
+    if (event.isComposing || event.key === 'Unidentified') {
+      return;
+    }
+    if (event.key === 'ArrowUp') {
+      this.moveSlide(-1);
+    }
+    if (event.key === 'ArrowDown') {
+      this.moveSlide(1);
+    }
+  };
+
+  handleWheel = (event) => {
+    const delta = Math.sign(event.deltaY);
+    clearTimeout(this.wheelTimeout);
+    this.wheelTimeout = setTimeout(() => {
+      this.moveSlide(delta);
+    }, 50);
+  };
+
+  // componentDidMount = () => {
+  //   document.addEventListener('keydown', (event) => {
+  //     if (event.isComposing || event.key === 'Unidentified') {
+  //       return;
+  //     }
+  //     if (event.key === 'ArrowUp') {
+  //       this.moveSlide(-1);
+  //     }
+  //     if (event.key === 'ArrowDown') {
+  //       this.moveSlide(1);
+  //     }
+  //   });
+  // };
 
   static propTypes = {
     slides: PropTypes.arrayOf(
