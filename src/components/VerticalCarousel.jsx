@@ -15,22 +15,29 @@ const Wrapper = styled.div`
 const NavigationButtons = styled.div`
   position: absolute;
   display: flex;
-  height: 70px;
-  margin: 0 auto;
   width: 20%;
+  min-width: 100px;
   /* margin-top: 1rem; */
   justify-content: space-between;
   z-index: 1000;
-  bottom: 10%;
-  left: 40%;
+  bottom: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   cursor: pointer;
 `;
 
 const NavBtn = styled.div`
-  /* background: #000000; */
-  padding: 15px;
-  margin-bottom: 10px;
+  background: #ffffff;
+  color: black;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
   border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 function mod(a, b) {
@@ -126,8 +133,8 @@ class VerticalCarousel extends React.Component {
     if (showNavigation) {
       navigationButtons = (
         <NavigationButtons>
-          <NavBtn onClick={() => this.moveSlide(1)}>⬆️</NavBtn>
-          <NavBtn onClick={() => this.moveSlide(-1)}>⬇️</NavBtn>
+          <NavBtn onClick={() => this.moveSlide(1)}>&#8593;</NavBtn>
+          <NavBtn onClick={() => this.moveSlide(-1)}>&#8595;</NavBtn>
         </NavigationButtons>
       );
     }
@@ -145,7 +152,7 @@ class VerticalCarousel extends React.Component {
             />
           ))}
         </Wrapper>
-        {/* {navigationButtons} */}
+        {navigationButtons}
       </React.Fragment>
     );
   }

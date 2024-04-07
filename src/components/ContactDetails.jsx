@@ -2,7 +2,7 @@ import { PopoverContent } from '@nextui-org/react';
 
 export default function ContactDetails() {
   return (
-    <PopoverContent className="w-full lg:w-[320px] z-50 bg-black shadow-md backdrop-blur-5 border border-white/30">
+    <PopoverContent className="w-[320px] z-50 bg-black shadow-md backdrop-blur-5 border border-white/30 left-[25%]">
       <div className="px-1 py-2 w-full">
         <div className="flex items-center">
           <img className="h-20 w-auto" src="./NLogo.png" alt="" />

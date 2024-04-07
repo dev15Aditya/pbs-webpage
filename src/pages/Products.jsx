@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import VerticalCarousel from '../components/VerticalCarousel';
+import { config } from 'react-spring';
 
 const crudeOil = [
   {
+    key: 1,
     title: 'Crude Oil',
     image: 'Crude Oil.jpg',
     hoveredText: [
@@ -25,6 +27,7 @@ const crudeOil = [
     ],
   },
   {
+    key: 2,
     title: 'Naphtha',
     image: 'Naphtha.jpg',
     hoveredText: [
@@ -37,6 +40,7 @@ const crudeOil = [
     text: ['MOPJ', 'NWE Naphtha'],
   },
   {
+    key: 3,
     title: 'Gasoline',
     image: 'Gasoline.jpg',
     hoveredText: [
@@ -50,6 +54,7 @@ const crudeOil = [
     text: ['Sing 92Ron', 'Sing 95Ron', 'Sing 97Ron', 'EBOB Swap', 'RBOB Swap'],
   },
   {
+    key: 4,
     title: 'Middle Distillates',
     image: 'Middle Distillates.jpg',
     hoveredText: [
@@ -64,6 +69,7 @@ const crudeOil = [
     text: ['Sing Gasoil (10ppm)', 'Sing Jet Kero', '0.5% Sulphur Gasoil'],
   },
   {
+    key: 5,
     title: 'Fuel Oil',
     image: 'Fuel Oil.jpg',
     hoveredText: [
@@ -83,6 +89,7 @@ const crudeOil = [
     ],
   },
   {
+    key: 6,
     title: 'Iron Ore',
     image: 'Iron Ore.jpg',
     hoveredText: ['Outright', 'Inter-month Spreads'],
@@ -90,25 +97,35 @@ const crudeOil = [
   },
 ];
 
-const Products = () => {
-  const [products, setProducts] = useState(crudeOil);
-  return (
-    <div className="min-h-[95vh] max-w-[1024px] mx-auto flex flex-wrap justify-center lg:justify-center items-center gap-5 py-6">
-      <div className="my-6 text-center">
-        <h1 className="text-[28px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8]">
-          See all we do
-        </h1>
-        <p className="text-[24px] text-center text-[#808080] tracking-tighter leading-[130%] font-[500]">
-          Our products cover a wide range of commodities with focus on energy
-          commodities, including crude oil and refined products.
-        </p>
-      </div>
+export default class Products extends Component {
+  state = {
+    goToSlide: 0,
+    offsetRadius: 2,
+    showNavigation: true,
+    config: config.gentle,
+  };
 
-      <div className="w-full mx-auto">
-        <VerticalCarousel height={500} children={products}></VerticalCarousel>
+  render() {
+    return (
+      <div
+        style={{
+          position: 'fixed',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          width: '100vw',
+          height: '100vh',
+          margin: '0 auto',
+          background: '#000000',
+        }}
+      >
+        <VerticalCarousel
+          slides={crudeOil}
+          offsetRadius={this.state.offsetRadius}
+          showNavigation={this.state.showNavigation}
+          animationConfig={this.state.config}
+        />
       </div>
-    </div>
-  );
-};
-
-export default Products;
+    );
+  }
+}

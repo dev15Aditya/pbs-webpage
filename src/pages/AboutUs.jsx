@@ -78,15 +78,15 @@ const AboutUs = () => {
     setCurrPage(page);
   };
 
-  useEffect(() => {
-    // Disable vertical scrolling on the entire page
-    document.body.style.overflowY = 'hidden';
+  // useEffect(() => {
+  //   // Disable vertical scrolling on the entire page
+  //   document.body.style.overflowY = 'hidden';
 
-    // Re-enable scrolling when the component unmounts
-    return () => {
-      document.body.style.overflowY = 'auto';
-    };
-  }, []);
+  //   // Re-enable scrolling when the component unmounts
+  //   return () => {
+  //     document.body.style.overflowY = 'auto';
+  //   };
+  // }, []);
 
   return (
     <div className="px-6 pb-5 lg:mt-0 md:px-10 max-w-full mx-auto overflow-hidden">

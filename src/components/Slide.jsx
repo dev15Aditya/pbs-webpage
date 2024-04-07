@@ -12,6 +12,8 @@ const SlideContainer = styled.div`
   justify-content: center;
   transform-origin: 50% 50%;
   border-radius: 16px;
+  user-select: none; /* Prevent text selection */
+  -webkit-touch-callout: none;
 `;
 
 const SlideCard = styled.div`
@@ -23,6 +25,8 @@ const SlideCard = styled.div`
   justify-content: center;
   transform-origin: 50% 50%;
   border-radius: 16px;
+  user-select: none; /* Prevent text selection */
+  -webkit-touch-callout: none;
 `;
 
 function Slide({
@@ -43,7 +47,7 @@ function Slide({
 
   const translateYoffset =
     50 * (Math.abs(offsetFromMiddle) / (offsetRadius + 1));
-  let translateY = -50;
+  let translateY = -60;
 
   if (offsetRadius !== 0) {
     if (index === 0) {
