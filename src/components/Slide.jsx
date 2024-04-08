@@ -108,21 +108,21 @@ function Slide({
                 {content.title}
               </h1>
               <div
-                className="flex flex-col sm:flex-row lg:gap-8"
+                className="flex flex-col sm:flex-row lg:gap-4"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
                 <img
                   src={`./${content.image}`}
                   alt="crude"
-                  className="md:w-[200px] lg:w-[520px] md:h-[150px] lg:h-[300px] rounded-lg mb-4 sm:mb-0"
+                  className="md:w-[200px] lg:w-[500px] md:h-[150px] lg:h-[300px] rounded-lg mb-4 sm:mb-0"
                 />
-                <div className="flex flex-col lg:justify-center lg:gap-2 lg:w-[200px] lg:h-[300px] overflow-auto">
+                <div className="flex flex-col lg:justify-center lg:gap-2 lg:w-[220px] lg:h-[300px] overflow-auto">
                   {isHovered
                     ? content.hoveredText.map((item, index) => (
                         <li
                           key={index}
-                          className="text-xs sm:text-sm md:text-base lg:text-base text-[#808080] tracking-tighter leading-[130%] font-[500] list-none"
+                          className="text-xs sm:text-sm md:text-[14px] text-[#808080] tracking-tighter leading-[130%] font-[500] list-none"
                         >
                           {item}
                         </li>
@@ -130,7 +130,7 @@ function Slide({
                     : content.text.map((item, index) => (
                         <li
                           key={index}
-                          className="text-xs sm:text-sm md:text-base lg:text-base text-[#808080] tracking-tighter leading-[130%] font-semibold list-none"
+                          className="text-xs sm:text-sm md:text-[14px] text-[#808080] tracking-tighter leading-[130%] font-semibold list-none"
                         >
                           {item}
                         </li>

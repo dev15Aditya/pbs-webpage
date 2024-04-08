@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Popover,
@@ -15,7 +15,11 @@ import {
 import ContactDetails from './ContactDetails';
 
 export default function App() {
+  const navbarToggleRef = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(
+    window.location.href.split(`${window.location.origin}`)
+  );
 
   const menuItems = [
     'About Us',
@@ -25,6 +29,11 @@ export default function App() {
     // 'Careers',
     'Sign Up',
   ];
+
+  const HandleSideMenu = (link) => {
+    setActiveMenu(link);
+    isMenuOpen && navbarToggleRef.current.click();
+  };
 
   return (
     <>
@@ -36,12 +45,14 @@ export default function App() {
           <NavbarMenuToggle
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             className="sm:hidden"
+            ref={navbarToggleRef}
+            onChange={(isSelected) => setIsMenuOpen(isSelected)}
           />
           <NavbarBrand>
             <Link to="/">
               <div className="flex items-center">
-                <img className="h-20 w-auto" src="./NLogo.png" alt="" />
-                <img className="h-8 w-auto " src="./NLogo2.png" alt="" />
+                <img className="h-16 md:h-20 w-auto" src="./NLogo.png" alt="" />
+                <img className="h-5 md:h-8 w-auto " src="./NLogo2.png" alt="" />
               </div>
             </Link>
           </NavbarBrand>
@@ -94,7 +105,10 @@ export default function App() {
         </NavbarContent>
         <NavbarMenu className="bg-transparent">
           {menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
+            <NavbarMenuItem
+              key={`${item}-${index}`}
+              isActive={item.replace(' ', '-').toLowerCase() === activeMenu}
+            >
               {index === 4 ? (
                 ''
               ) : (
@@ -109,6 +123,9 @@ export default function App() {
                   className="w-full text-[#ffffff]  hover:font-semibold hover:text-white"
                   to={`/${item.toLowerCase().replace(' ', '-')}`}
                   size="lg"
+                  onClick={() =>
+                    HandleSideMenu(item.replace(' ', '-').toLowerCase())
+                  }
                 >
                   {item}
                 </Link>

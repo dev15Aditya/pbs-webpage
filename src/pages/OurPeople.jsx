@@ -39,7 +39,7 @@ const data = {
   ],
 };
 
-const ceo = ['CEO-JasperAng.jpg', 'Jasper Ang', 'CEO'];
+const ceo = ['CEO-JasperAng.jpg', 'Jasper Ang', 'Chief executive officer'];
 
 const OurPeople = () => {
   return (
@@ -54,7 +54,7 @@ const OurPeople = () => {
         <div className="w-[240px] my-10 m-auto">
           <Image image={ceo} />
         </div>
-        <div className="flex flex-wrap gap-5 items-center justify-center my-10">
+        <div className="flex flex-wrap gap-5 items-center justify-center my-10 max-w-[1024px] mx-auto">
           {data.image.map((img, index) => (
             <Image key={index} image={img} />
           ))}

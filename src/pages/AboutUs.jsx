@@ -9,7 +9,8 @@ const Card = ({ page }) => {
     {
       title: 'Our Values',
       text: {
-        'Client Centric': '',
+        'Client Centric':
+          'We place our clients at the forefront of everything we do.',
         Integrity:
           'Our commitment to integrity ensures that we always act in the best interests of our clients and for the longevity of the business.',
         Expertise:
@@ -50,7 +51,7 @@ const Card = ({ page }) => {
           </div>
         </div>
       ) : page === 2 ? (
-        <div className=" overflow-auto h-[230px] md:h-[150px]">
+        <div className=" overflow-auto h-[230px] md:h-[170px]">
           {Object.entries(currentPageContent.text).map(([key, value]) => (
             <div key={key}>
               <h2 className="font-semibold text-[#FFFFFF] text-[24px] mt-4">

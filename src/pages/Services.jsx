@@ -42,7 +42,7 @@ export default function App() {
     {
       title: 'Hedging Solutions',
       displayTitle:
-        'PBS offer innovative and effective derivative hedging solutions to help our clients safeguard other investments.',
+        'We offer innovative and effective derivative hedging solutions to help our clients safeguard their investments.',
       description:
         'At PBS we understand the challenges posed by market fluctuations and are dedicated to tailoring our hedging solutions to our clients to help them navigate potential losses or exposure to market volatility effectively.',
       path: 'circle(50% at 100% 0)',
@@ -55,7 +55,7 @@ export default function App() {
     {
       title: 'Research & Analysis',
       displayTitle:
-        'PBS offers cutting edge market weights and data reports from over experince analysts.',
+        'We offers cutting edge market insights and data reports from our experienced analysts.',
       description:
         'With our research and analysis on market trends and dynamics in the commodity markets, we are able to provide our clients with the essential information for them to make well informed trading decisions.',
       path: 'circle(50% at 0 0)',
