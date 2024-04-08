@@ -93,7 +93,7 @@ const crudeOil = [
     title: 'Iron Ore',
     image: 'Iron Ore.jpg',
     hoveredText: ['Outright', 'Inter-month Spreads'],
-    text: ['SGX TSI Iron Ore CFR China', '(62% Fe Fines)'],
+    text: ['SGX TSI Iron Ore CFR China'],
   },
 ];
 

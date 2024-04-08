@@ -16,7 +16,7 @@ export default function App() {
     {
       title: 'Inter-dealer Broker',
       displayTitle:
-        'Our core expertise lies in the broking of over-the-counter products.',
+        'Our core expertise lies in the broking of over-the-counter commodity derivatives.',
       description:
         'Leveraging on our extensive market connectivity, we are able to offer liquidity and facilitate the matching of buyers and sellers as an intermediary, thus enabling our clients’ greater access to the global derivatives market, price discovery and anonymity all at the same time.',
       path: 'circle(50% at 100% 100%)',
@@ -68,9 +68,9 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-[100vh] lg:min-h-[130vh]  flex flex-col justify- items-center overflow-x-hidden pb-[150px] relative bg-[#000000]">
-      <h1 className="text-[28px]  tracking-tighter leading-[130%] font-sans font-semibold m-5 text-[#FFF] px-5">
-        Solutions know no boundaries, only limited by your imagination
+    <div className="min-h-[100vh] lg:min-h-[130vh] mt-3  flex flex-col justify- items-center overflow-x-hidden pb-[150px] relative bg-[#000000]">
+      <h1 className="text-[28px]  tracking-tighter leading-[130%] font-sans font-semibold m-3 text-[#FFF] px-5">
+        Your trusted partner in navigating the complexities of commodity trading{' '}
       </h1>
       <div className="relative top-72">
         <Avatar

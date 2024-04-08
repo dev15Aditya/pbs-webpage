@@ -26,7 +26,7 @@ const Hero = () => {
 
       <div className="z-10 max-w-[1024px] mx-auto flex flex-col gap-5">
         <p className="text-[24px] md:text-[70px] text-left font-semibold text-[#FFF] leading-[103%] z-10">
-          Connecting clients to the global commodities market
+          Connecting clients to <br /> the global commodities market
         </p>
 
         <Link

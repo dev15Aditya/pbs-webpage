@@ -39,17 +39,18 @@ const data = {
   ],
 };
 
-const ceo = ['CEO-JasperAng.jpg', 'Jasper Ang', 'Chief executive officer'];
+const ceo = ['CEO-JasperAng.jpg', 'Jasper Ang', 'Chief Executive Officer'];
 
 const OurPeople = () => {
   return (
-    <div className="min-h-[75vh] lg:min-h-[130vh]  flex flex-col justify- items-center overflow-hidden pb-[150px] relative bg-[#000000]">
-      <h1 className="text-[28px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8] mt-10">
+    <div className="min-h-[75vh] lg:min-h-[130vh] mt-5 flex flex-col justify- items-center overflow-hidden pb-[150px] relative bg-[#000000]">
+      {/* <h1 className="text-[28px] tracking-tighter leading-[130%] font-sans font-semibold text-[#f8f8f8] mt-10">
         {data.title}
-      </h1>
+      </h1> */}
       <div>
-        <p className="text-[20px] px-5 pt-5 lg:text-[24px] text-[#808080] tracking-tighter leading-[130%] font-[500] text-center">
-          {data.text}
+        <p className="text-[28px] text-center tracking-tighter leading-[130%] font-sans font-semibold m-3 text-[#FFF] px-5">
+          Meet the dedicated individuals who drive our company forward with{' '}
+          <br /> passion, expertise and a commitment to excellence.
         </p>
         <div className="w-[240px] my-10 m-auto">
           <Image image={ceo} />
