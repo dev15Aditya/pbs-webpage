@@ -49,7 +49,7 @@ export default function App() {
             onChange={(isSelected) => setIsMenuOpen(isSelected)}
           />
           <NavbarBrand>
-            <Link to="/">
+            <Link to="/" onClick={() => HandleSideMenu('/')}>
               <div className="flex items-center">
                 <img className="h-16 md:h-20 w-auto" src="./NLogo.png" alt="" />
                 <img className="h-5 md:h-8 w-auto " src="./NLogo2.png" alt="" />
