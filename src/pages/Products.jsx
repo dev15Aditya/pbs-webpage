@@ -13,7 +13,7 @@ const crudeOil = [
       'EFS',
       'DFL',
       'WTI/Brent',
-      'Brent/Dub ai',
+      'Brent/Dubai',
       'Murban/Dubai',
       'Oman/Dubai',
     ],

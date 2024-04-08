@@ -48,9 +48,9 @@ const Card = ({ page }) => {
               {' '}
               <br />
             </span>{' '}
-            The Company shall only have customers who are defined within the
-            meaning as defined in section 4A(1)(a), or 4A(1)(b) or 4A(1)(c) of
-            the Securities and Futures Act 2001 (“SFA”).
+            The Company shall only have customers who are within the meaning as
+            defined in section 4A(1)(a), or 4A(1)(b) or 4A(1)(c) of the
+            Securities and Futures Act 2001 (“SFA”).
             <br />{' '}
             <span className="hidden md:block">
               {' '}

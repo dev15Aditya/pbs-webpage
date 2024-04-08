@@ -55,7 +55,7 @@ export default function App() {
     {
       title: 'Research & Analysis',
       displayTitle:
-        'We offers cutting edge market insights and data reports from our experienced analysts.',
+        'We offer cutting edge market insights and data reports from our experienced analysts.',
       description:
         'With our research and analysis on market trends and dynamics in the commodity markets, we are able to provide our clients with the essential information for them to make well informed trading decisions.',
       path: 'circle(50% at 0 0)',
