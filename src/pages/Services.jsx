@@ -68,14 +68,18 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-[100vh] lg:min-h-[130vh] mt-3  flex flex-col justify- items-center overflow-x-hidden pb-[150px] relative bg-[#000000]">
-      <h1 className="text-[28px]  tracking-tighter leading-[130%] font-sans font-semibold m-3 text-[#FFF] px-5">
-        Your trusted partner in navigating the complexities of commodity trading{' '}
-      </h1>
+    <div className="min-h-[110vh] lg:min-h-[200vh] overflow-hidden mt-3  flex flex-col justify- items-center pb-[150px] relative bg-[#000000]">
+      <div className="relative">
+        <img src="./Our Services.jpg" alt="" />
+        <h1 className="text-[14px] md:text-[40px]  tracking-tighter leading-[130%] font-sans font-semibold m-3 text-[#FFF] px-5 absolute top-1/2 md:left-[4%]">
+          Your trusted partner in navigating <br /> the complexities of
+          commodity trading{' '}
+        </h1>
+      </div>
       <div className="relative top-72">
         <Avatar
           src="./NLogo.png"
-          className="w-44 h-44 bg-black text-large rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+          className="w-40 h-40 bg-black text-large rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
         />
 
         {/* <div className="bg-[#000000] w-44 h-44 text-large rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div> */}
