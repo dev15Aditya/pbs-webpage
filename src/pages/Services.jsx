@@ -68,7 +68,7 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-[110vh] lg:min-h-[200vh] overflow-hidden mt-3  flex flex-col justify- items-center pb-[150px] relative bg-[#000000]">
+    <div className="min-h-[110vh] lg:min-h-[220vh] overflow-hidden mt-3  flex flex-col justify- items-center pb-[150px] relative bg-[#000000]">
       <div className="relative">
         <img src="./Our Services.jpg" alt="" />
         <h1 className="text-[14px] md:text-[40px]  tracking-tighter leading-[130%] font-sans font-semibold m-3 text-[#FFF] px-5 absolute top-1/2 md:left-[4%]">
@@ -79,7 +79,7 @@ export default function App() {
       <div className="relative top-72">
         <Avatar
           src="./NLogo.png"
-          className="w-40 h-40 bg-black text-large rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+          className="h-20 w-20 lg:w-40 lg:h-40 bg-black text-large rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
         />
 
         {/* <div className="bg-[#000000] w-44 h-44 text-large rounded-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div> */}
@@ -111,13 +111,13 @@ export default function App() {
               }}
               onClick={() => handleDescriptionClick(quadrant.description)}
             >
-              <h1 className="text-[14px] mb-4 md:text-[20px] lg:text-[22px] text-center font-bold mt-10 md:mt-0">
+              <h1 className="text-[14px] mb-4 md:text-[20px] lg:text-[22px] text-center font-bold lg:mt-10 md:mt-0">
                 {quadrant.title}
               </h1>
-              <p className="text-[12px] mb-3 lg:text-[16px] font-semibold text-center md:text-left">
+              <p className="text-[10px] md:text-[12px] mb-3 lg:text-[16px] font-semibold text-center md:text-left">
                 {quadrant.displayTitle}
               </p>
-              <p className="text-[12px] hidden md:block h-[180px] w-[full] text-ellipsis">
+              <p className="text-[12px] hidden h-[180px] w-[full] text-ellipsis">
                 {quadrant.description}
               </p>
             </div>
