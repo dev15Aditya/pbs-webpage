@@ -123,8 +123,10 @@ export default function App() {
                   className="w-full text-[#ffffff]  hover:font-semibold hover:text-white"
                   to={`/${item.toLowerCase().replace(' ', '-')}`}
                   size="lg"
-                   onClick={() =>
-                    HandleSideMenu(item.replace(' ', '-').toLowerCase())
+                   onClick={() => {
+                    HandleSideMenu(item.replace(' ', '-').toLowerCase());
+                     navbarToggleRef.current.click();
+                   }
                   } 
                 >
                   {item}
