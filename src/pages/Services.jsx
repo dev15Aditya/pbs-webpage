@@ -111,13 +111,13 @@ export default function App() {
               }}
               onClick={() => handleDescriptionClick(quadrant.description)}
             >
-              <h1 className="text-[14px] mb-4 md:text-[20px] lg:text-[22px] text-center font-bold lg:mt-10 md:mt-0">
+              <h1 className="text-[14px] mb-4 md:text-[20px] lg:text-[22px] text-center font-bold mt-5 md:mt-0">
                 {quadrant.title}
               </h1>
               <p className="text-[10px] md:text-[12px] mb-3 lg:text-[16px] font-semibold text-center md:text-left">
                 {quadrant.displayTitle}
               </p>
-              <p className="text-[12px] hidden h-[180px] w-[full] text-ellipsis">
+              <p className="text-[12px] hidden md:block h-[180px] w-[full] text-ellipsis">
                 {quadrant.description}
               </p>
             </div>
@@ -125,7 +125,7 @@ export default function App() {
         </div>
       </div>
       {selectedDescription && (
-        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-800 bg-opacity-50 z-50">
+        <div className="fixed md:hidden top-0 left-0 w-full h-full flex justify-center items-center bg-gray-800 bg-opacity-50 z-50">
           <div
             className="rounded-lg p-8 max-w-md z-50"
             style={{

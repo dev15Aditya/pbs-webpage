@@ -60,6 +60,8 @@ const Card = ({ page }) => {
             <a
               href="https://sso.agc.gov.sg/Acts-Supp/42-2001/Published/20021231?DocDate=20011203"
               className="underline"
+              target="_blank"
+              rel="noreferrer"
             >
               here
             </a>
