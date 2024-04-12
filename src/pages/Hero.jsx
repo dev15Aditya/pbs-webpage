@@ -18,6 +18,7 @@ const Hero = () => {
         autoPlay
         loop
         muted
+        playsInline
         className="absolute top-0 left-0 w-full h-[90vh] overflow-hidden object-cover z-0"
       >
         <source src="/hero.mp4" type="video/mp4" />
