@@ -123,13 +123,9 @@ export default function App() {
                   className="w-full text-[#ffffff]  hover:font-semibold hover:text-white"
                   to={`/${item.toLowerCase().replace(' ', '-')}`}
                   size="lg"
-/*                   onClick={() =>
+                   onClick={() =>
                     HandleSideMenu(item.replace(' ', '-').toLowerCase())
-                  } */
-  onClick={() => {
-                    HandleSideMenu(item.path);
-                    setIsMenuOpen(false); // Close the dropdown explicitly
-                  }}
+                  } 
                 >
                   {item}
                 </Link>
