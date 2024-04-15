@@ -103,15 +103,14 @@ function Slide({
                 WebkitBackdropFilter: 'blur(5px)',
                 border: '1px solid rgba(255, 255, 255, 0.3)',
               }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              onClick={() => setIsHovered(!isHovered)}
             >
               <h1 className="text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-tighter leading-[130%] font-semibold text-[#fff] mb-4">
                 {content.title}
               </h1>
-              <div
-                className="flex flex-col sm:flex-row lg:gap-4"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
+              <div className="flex flex-col sm:flex-row lg:gap-4">
                 <img
                   src={`./${content.image}`}
                   alt="crude"
