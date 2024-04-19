@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { Spring } from 'react-spring/renderprops';
 import { withGesture } from 'react-with-gesture';
@@ -40,9 +40,6 @@ function Slide({
   up,
 }) {
   const [isHovered, setIsHovered] = useState(false);
-  const handleClick = useCallback(() => {
-    setIsHovered((prevIsHovered) => !prevIsHovered);
-  }, []);
 
   const offsetFromMiddle = index - offsetRadius;
   const totalPresentables = 2 * offsetRadius + 1;
@@ -108,7 +105,7 @@ function Slide({
               }}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-              onClick={handleClick}
+              onClick={() => setIsHovered(!isHovered)}
             >
               <h1 className="text-xl sm:text-xl md:text-2xl lg:text-3xl tracking-tighter leading-[130%] font-semibold text-[#fff] mb-4">
                 {content.title}
