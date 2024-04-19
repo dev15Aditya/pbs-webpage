@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 
 export default function Image({ image }) {
   const [iseFlipped, setIsFlipped] = useState(false);
 
-  const handleClick = () => {
-    setIsFlipped(!iseFlipped);
-  };
+  // const handleClick = () => {
+  //   setIsFlipped(!iseFlipped);
+  // };
+  const handleClick = useCallback(() => {
+    setIsFlipped((prev) => !prev);
+  }, []);
+
   return (
     <ReactCardFlip isFlipped={iseFlipped} flipDirection="vertical">
       <img
